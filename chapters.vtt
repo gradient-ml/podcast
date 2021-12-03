@@ -1,73 +1,79 @@
-WEBVTT
+﻿WEBVTT
 
 00:00:00.000 --> 00:02:20.000
 Intro
 
 00:02:20.000 --> 00:05:30.000
-Start in AI
+Start in AI: the origin story
 
-00:05:30.000 --> 00:13:00.000
-Start in explainable AI
+00:05:30.000 --> 00:10:55.000
+The non-traditional journey to work in Explainable AI (XAI)
 
-00:13:00.000 --> 00:18:50.000
+00:10:55.000 --> 00:12:46.000
+How background in Philosophy helps in XAI
+
+00:12:46.000 --> 00:18:50.000
 Overview of Explainable AI (XAI)
 
 00:18:50.000 --> 00:20:42.000
-Human-Centered Explainable AI
+Human-Centered Explainable AI (HCXAI)
 
 00:20:42.000 --> 00:27:15.000
 Motivating Story
 
 00:27:15.000 --> 00:30:50.000
-Start of PhD Journey
+Turn to Algorithmic XAI
 
 00:30:50.000 --> 00:34:45.000
-Turn to Human-Centered Research
+Turn to Human-Centered XAI
 
 00:34:45.000 --> 00:41:28.000
-Beyond 1-1 Human XAI
+Beyond 1-1 Human-AI interaction: Towards a sociotechnical approach
 
 00:41:28.000 --> 00:45:00.000
-Expanding AI Explainability
+Expanding Explainability: Rethinking XAI beyond Algorithmic Transparency
 
 00:45:00.000 --> 00:50:30.000
-What is Social Transparency
+What is Social Transparency (ST)
 
 00:50:30.000 --> 00:54:03.000
 Study Sales Scenario
 
 00:54:03.000 --> 00:59:33.000
-Importance of Social Transparency
+Importance of Social Transparency to promote holistic Explainability
 
 00:59:33.000 --> 01:02:55.000
-Controlled Study of 4Ws
+Scenario-based Design Study of 4Ws (who did, what, when, and why)
 
 01:02:55.000 --> 01:08:05.000
 Crew Knowledge
 
 01:08:05.000 --> 01:10:20.000
-What is most important
+Relaive importance of the 4Ws (who, what, when, why)
 
 01:10:20.000 --> 01:12:40.000
 Challenges with Social Transparency
 
 01:12:40.000 --> 01:16:00.000
-Case Study in Real Company
+Implementing Social Transparency in a real-world system
 
 01:16:00.000 --> 01:18:20.000
-Impact on XAI Research Community
+How does Social Transaprency impact on XAI Research Community
 
 01:18:20.000 --> 01:19:50.000
-Reception by Research Community
+Reception of ST by Research Community
 
-01:19:50.000 --> 01:26:20.000
-Recent Works
+01:19:50.000 --> 01:22:09.000
+Recent paper: The Who in XAI-- how AI background impacts XAI interpretations
+
+01:22:09.000 --> 01:26:20.000
+Recent paper: Explainability Pitfalls-- how to handle UNintentional negative effects of XAI
 
 01:26:20.000 --> 01:28:13.000
-State of XAI
+The Current State of Human-centered XAI
 
 01:28:13.000 --> 01:31:40.000
-What's Next
+What's Next for HCXAI?
 
 01:31:40.000 --> 01:35:25.000
 Interests Outside Research + Outro

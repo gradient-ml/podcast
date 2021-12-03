@@ -1,0 +1,5654 @@
+WEBVTT
+
+1
+00:00:05.400 --> 00:00:10.469
+<v Andrey>Hello and welcome to the 18th episode of The Gradient podcast,.
+
+2
+00:00:10.470 --> 00:00:15.359
+<v Andrey>The Gradient is a digital magazine that aims to be a place for discussion about research
+
+3
+00:00:15.360 --> 00:00:19.139
+<v Andrey>and trends in artificial intelligence and machine learning.
+
+4
+00:00:19.140 --> 00:00:23.909
+<v Andrey>We interview various people in AI such as engineers, researchers, artists
+
+5
+00:00:23.910 --> 00:00:27.539
+<v Andrey>and more. I'm your host Andrey Kurenkov.
+
+6
+00:00:27.540 --> 00:00:31.542
+<v Andrey>In this episode, I'm excited to be interviewing Upol Ehsan.
+
+7
+00:00:31.543 --> 00:00:35.669
+<v Andrey>Upol Cares about people first and technology second.
+
+8
+00:00:35.670 --> 00:00:40.319
+<v Andrey>He's a doctoral candidate in the School of Interactive Computing at Georgia Tech
+
+9
+00:00:40.320 --> 00:00:44.669
+<v Andrey>and an affiliate at the Data and Society Research Institute.
+
+10
+00:00:44.670 --> 00:00:49.649
+<v Andrey>Combining his expertize in AI and background in philosophy as work
+
+11
+00:00:49.650 --> 00:00:54.179
+<v Andrey>in explainable AI, or XAI, aims to foster a future where
+
+12
+00:00:54.180 --> 00:00:59.849
+<v Andrey>anyone, regardless of their background, can use AI powered technology with dignity.
+
+13
+00:00:59.850 --> 00:01:04.348
+<v Andrey>Putting the human first and focusing on how our values shape the use and
+
+14
+00:01:04.349 --> 00:01:09.179
+<v Andrey>abuse of technology, his work has coined the term human-centered
+
+15
+00:01:09.180 --> 00:01:13.829
+<v Andrey>explainable AI, which is subfield of expainable AI,
+
+16
+00:01:13.830 --> 00:01:16.079
+<v Andrey>and charted its visions.
+
+17
+00:01:16.080 --> 00:01:20.609
+<v Andrey>Actively publishing in top peer reviewed venues like CHI, his work has received
+
+18
+00:01:20.610 --> 00:01:24.809
+<v Andrey>multiple awards and has been covered in major media outlets.
+
+19
+00:01:24.810 --> 00:01:29.519
+<v Andrey>Bridging industry and academia, he serves on multiple program committees
+
+20
+00:01:29.520 --> 00:01:32.607
+<v Andrey>in HCI and AI conferences such as Neurips and DIS,
+
+21
+00:01:34.320 --> 00:01:36.375
+<v Andrey>and equally connects these communities.
+
+22
+00:01:36.376 --> 00:01:40.859
+<v Andrey>By promoting equity and ethics in AI he wants to ensure
+
+23
+00:01:40.860 --> 00:01:45.449
+<v Andrey>stakeholders who aren't at the table do not end up on the
+
+24
+00:01:45.450 --> 00:01:46.450
+<v Andrey>menu.
+
+25
+00:01:46.860 --> 00:01:49.151
+<v Andrey>Outside of research he is an advisor for Aalor Asha, an educational
+
+26
+00:01:51.570 --> 00:01:57.269
+<v Andrey>Institute he started for underprivileged children subjected to child labor.
+
+27
+00:01:57.270 --> 00:01:59.032
+<v Andrey>At Twitter you can follow him at @UpolEhsan - U
+
+28
+00:02:01.703 --> 00:02:05.119
+<v Andrey>P O L E H S A N.
+
+29
+00:02:06.390 --> 00:02:10.799
+<v Andrey>So I'm very excited for this, Upol has written to The Gradient before, and I think his
+
+30
+00:02:10.800 --> 00:02:14.396
+<v Andrey>work is super cool. Welcome to the podcast, Upol.
+
+31
+00:02:15.540 --> 00:02:18.210
+<v Upol>Thank you for having me on. It's pleasure to be here.
+
+32
+00:02:19.290 --> 00:02:24.059
+<v Andrey>Definitely. So as we usually do in these episodes before diving into
+
+33
+00:02:24.060 --> 00:02:28.529
+<v Andrey>your work a bit on your sort of background, I'm curious, how did
+
+34
+00:02:28.530 --> 00:02:31.009
+<v Andrey>you get into working on AI?
+
+35
+00:02:31.010 --> 00:02:35.482
+<v Andrey>I think your trajectory might be interesting or your background in
+
+36
+00:02:35.483 --> 00:02:36.989
+<v Andrey>philosophy as well.
+
+37
+00:02:36.990 --> 00:02:41.939
+<v Upol>Yes, I think I have Isaac Asimov to kind of attribute
+
+38
+00:02:41.940 --> 00:02:46.439
+<v Upol>that credit to. When I was very young, I got hooked into
+
+39
+00:02:46.440 --> 00:02:50.009
+<v Upol>his books. I have read forty seven of his books, not just the science fiction...
+
+40
+00:02:51.750 --> 00:02:52.439
+<v Andrey>Wow, that's a lot.
+
+41
+00:02:52.440 --> 00:02:56.979
+<v Upol>I mean, the maestro is is someone who's near and dear to my heart, which makes
+
+42
+00:02:56.980 --> 00:03:01.559
+<v Upol>watching foundation and Apple TV right now a very scary prospect.
+
+43
+00:03:01.560 --> 00:03:06.359
+<v Upol>Because I remember those things, but I think Asimov
+
+44
+00:03:06.360 --> 00:03:11.429
+<v Upol>pushed me to think about artificial intelligence in ways that I don't think
+
+45
+00:03:11.430 --> 00:03:15.959
+<v Upol>I would have thought of, because all of his books, if you think about it,
+
+46
+00:03:15.960 --> 00:03:20.429
+<v Upol>it's about how does how can we find
+
+47
+00:03:20.430 --> 00:03:24.869
+<v Upol>flaws in the three laws of robotics that kind of he proposed,
+
+48
+00:03:24.870 --> 00:03:25.870
+<v Upol>right?
+
+49
+00:03:26.400 --> 00:03:31.019
+<v Upol>And in college, I was very, so I grew up in a philosophy
+
+50
+00:03:31.020 --> 00:03:35.489
+<v Upol>department that had a lot of cognitive scientists in them, but who were teaching
+
+51
+00:03:35.490 --> 00:03:36.659
+<v Upol>analytic philosophy.
+
+52
+00:03:37.680 --> 00:03:41.189
+<v Upol>And that's where I actually got into AI. I got hooked into it.
+
+53
+00:03:41.190 --> 00:03:45.899
+<v Upol>I was like, OK, and maybe initially I had more ambitious
+
+54
+00:03:45.900 --> 00:03:49.289
+<v Upol>goals of creating something like AGI, so to speak.
+
+55
+00:03:49.290 --> 00:03:53.039
+<v Upol>But then over time, I started getting more practical about it.
+
+56
+00:03:53.040 --> 00:03:58.049
+<v Upol>And after graduating, I actually spent a lot of time doing management, consulting
+
+57
+00:03:58.050 --> 00:03:59.729
+<v Upol>and then ran a startup.
+
+58
+00:03:59.730 --> 00:04:04.492
+<v Upol>And in those experiences, I was dealing with AI-mediated
+
+59
+00:04:04.493 --> 00:04:08.159
+<v Upol>applications, but mostly on the consumer side.
+
+60
+00:04:08.160 --> 00:04:12.659
+<v Upol>So I had clients who are really using this at the enterprise level, and I was
+
+61
+00:04:12.660 --> 00:04:18.268
+<v Upol>seeing how sometimes despite best intentions, the
+
+62
+00:04:18.269 --> 00:04:21.059
+<v Upol>real use of these systems were suffering.
+
+63
+00:04:21.060 --> 00:04:24.449
+<v Upol>So that's one way when I got into the Ph.D.
+
+64
+00:04:24.450 --> 00:04:28.889
+<v Upol>journey, I started thinking of artificial intelligence, but from
+
+65
+00:04:28.890 --> 00:04:29.890
+<v Upol>the human side.
+
+66
+00:04:31.200 --> 00:04:34.829
+<v Andrey>Right, and this was roughly when what year?
+
+67
+00:04:34.830 --> 00:04:39.819
+<v Upol>Yeah, so I had like so it was like I started the
+
+68
+00:04:39.820 --> 00:04:42.150
+<v Upol>P.h.D journey roughly around 20 15/16.
+
+69
+00:04:44.280 --> 00:04:48.929
+<v Upol>But the work that I had done before that was like the last four years before
+
+70
+00:04:48.930 --> 00:04:51.010
+<v Upol>that, that's around like 2012 13.
+
+71
+00:04:52.230 --> 00:04:56.609
+<v Upol>So that's like the industry experience very much drives a lot of my insights into the
+
+72
+00:04:56.610 --> 00:05:01.229
+<v Upol>work today, especially seeing people and I do consult
+
+73
+00:05:01.230 --> 00:05:06.059
+<v Upol>even now. So I'm very much in the applied setting of these research
+
+74
+00:05:06.060 --> 00:05:08.939
+<v Upol>discussions, which help me kind of bridge too.
+
+75
+00:05:08.940 --> 00:05:13.379
+<v Upol>That's why you'll see, even in my work, I do tend to have a more applied kind of
+
+76
+00:05:13.380 --> 00:05:14.380
+<v Upol>a connotation.
+
+77
+00:05:15.150 --> 00:05:19.829
+<v Andrey>Yeah, yeah. I was just wondering because I think, you know, obviously there's been a huge
+
+78
+00:05:19.830 --> 00:05:24.289
+<v Andrey>boom in AI over the past decade and explainable AI, which
+
+79
+00:05:24.290 --> 00:05:28.859
+<v Andrey>you know your in has been more and more an
+
+80
+00:05:28.860 --> 00:05:33.449
+<v Andrey>area of study, but I think it took it a little while it sort of is catching
+
+81
+00:05:33.450 --> 00:05:37.019
+<v Andrey>up in some sense as as AI is getting deployed.
+
+82
+00:05:37.020 --> 00:05:41.849
+<v Andrey>Yeah. And then so you started your PhD journey in 2015, did you go to
+
+83
+00:05:41.850 --> 00:05:46.319
+<v Andrey>explainable AI right right away or did it sort of did you find your way there a
+
+84
+00:05:46.320 --> 00:05:47.459
+<v Andrey>bit later?
+
+85
+00:05:47.460 --> 00:05:52.289
+<v Upol>That's a really great question. No, I actually started my journey doing affective
+
+86
+00:05:52.290 --> 00:05:57.149
+<v Upol>computing, so I was very much interested in helping children with autism,
+
+87
+00:05:57.150 --> 00:06:01.829
+<v Upol>learn about non-verbal communication to
+
+88
+00:06:01.830 --> 00:06:04.739
+<v Upol>head up displays, and Google Glass was very hot back then.
+
+89
+00:06:04.740 --> 00:06:08.279
+<v Upol>Oh yeah. So I was trying to develop algorithms trying to help
+
+90
+00:06:09.330 --> 00:06:14.219
+<v Upol>people who had had difficulties processing social signals
+
+91
+00:06:14.220 --> 00:06:18.909
+<v Upol>to use some kind of a prosthetic to kind of augment that social interaction.
+
+92
+00:06:18.910 --> 00:06:20.759
+<v Upol>So that's how I actually started.
+
+93
+00:06:20.760 --> 00:06:24.539
+<v Upol>And then after that, I am originally from Bangladesh.
+
+94
+00:06:24.540 --> 00:06:29.159
+<v Upol>So I, the global south has been very much and is still very
+
+95
+00:06:29.160 --> 00:06:32.009
+<v Upol>much a core part of my existence.
+
+96
+00:06:32.010 --> 00:06:36.629
+<v Upol>So after that, I started looking at how do these technologies kind of behave
+
+97
+00:06:36.630 --> 00:06:41.100
+<v Upol>in the global south, where the technology is not necessarily made in?
+
+98
+00:06:42.900 --> 00:06:47.579
+<v Upol>After that, I think it was in two thousand sixteen or seventeen
+
+99
+00:06:47.580 --> 00:06:52.859
+<v Upol>where DARPA had that XAI grant and
+
+100
+00:06:52.860 --> 00:06:56.699
+<v Upol>that was the first time where because it's interesting, right?
+
+101
+00:06:56.700 --> 00:06:59.459
+<v Upol>Like explainability of AI is not real.
+
+102
+00:06:59.460 --> 00:07:04.199
+<v Upol>If you look at the literature in the 80s, there is a lot of work, in fact, that comics
+
+103
+00:07:04.200 --> 00:07:06.929
+<v Upol>label and I was coined back in the 80s of the 90s.
+
+104
+00:07:08.130 --> 00:07:12.059
+<v Upol>This was based on the knowledge, you know, the knowledge based systems like we had a
+
+105
+00:07:12.060 --> 00:07:13.769
+<v Upol>second there.
+
+106
+00:07:13.770 --> 00:07:18.839
+<v Upol>But with the advent of Deep Learning and Deep Learning becoming kind of
+
+107
+00:07:18.840 --> 00:07:23.279
+<v Upol>enterprise level almost like coming of age, you
+
+108
+00:07:23.280 --> 00:07:28.919
+<v Upol>see, then there is this need to hold these systems accountable.
+
+109
+00:07:28.920 --> 00:07:33.419
+<v Upol>So I actually had walked into my advisor's office
+
+110
+00:07:33.420 --> 00:07:37.949
+<v Upol>at that time and I was asking, you know, what kind of projects do
+
+111
+00:07:37.950 --> 00:07:42.489
+<v Upol>we have to work on? And he said, And my advisor is
+
+112
+00:07:42.490 --> 00:07:47.099
+<v Upol>fantastic Mark Riedl. And Mark kind of said that, hey, there is this other
+
+113
+00:07:47.100 --> 00:07:51.539
+<v Upol>project that no one really has taken upon themselves
+
+114
+00:07:51.540 --> 00:07:54.899
+<v Upol>because we don't really know what it would look like.
+
+115
+00:07:54.900 --> 00:07:56.949
+<v Upol>And I said, What is it this explainable AI?
+
+116
+00:07:56.950 --> 00:08:01.529
+<v Upol>I think until at that time, like I had not heard about the term,
+
+117
+00:08:01.530 --> 00:08:06.449
+<v Upol>I was like, This sounds like interesting. And I think upon reflection, what I realized
+
+118
+00:08:06.450 --> 00:08:10.919
+<v Upol>about myself is I do very well when it's an empty slate and I get
+
+119
+00:08:10.920 --> 00:08:14.649
+<v Upol>to paint my own picture rather than a very well formed slate.
+
+120
+00:08:14.650 --> 00:08:19.139
+<v Upol>So I was very lucky to get into that debate
+
+121
+00:08:19.140 --> 00:08:23.969
+<v Upol>very early on. In the second resurgence, I would argue, because the second life
+
+122
+00:08:23.970 --> 00:08:28.529
+<v Upol>XAI has had is, I think, much more longer than the first
+
+123
+00:08:28.530 --> 00:08:33.179
+<v Upol>life it had because it was there and but it also wasn't there in the early 1980s.
+
+124
+00:08:34.830 --> 00:08:38.999
+<v Upol>So then I started looking into it.
+
+125
+00:08:39.000 --> 00:08:43.558
+<v Upol>I started on the algorithmic side, frankly, and then trying to work with algorithms.
+
+126
+00:08:43.559 --> 00:08:47.549
+<v Upol>And then over time, I got on my Human side and you are right.
+
+127
+00:08:47.550 --> 00:08:52.109
+<v Upol>I think explainable AI is very much in
+
+128
+00:08:52.110 --> 00:08:55.799
+<v Upol>flux. That's how I would talk about it.
+
+129
+00:08:55.800 --> 00:09:00.749
+<v Upol>I think we as a community, we are still trying to figure out how to
+
+130
+00:09:00.750 --> 00:09:05.459
+<v Upol>navigate this field, being consistent in
+
+131
+00:09:05.460 --> 00:09:09.329
+<v Upol>our terminology in the way we do our work.
+
+132
+00:09:09.330 --> 00:09:13.439
+<v Upol>But there is also a certain level of beauty in that.
+
+133
+00:09:13.440 --> 00:09:17.969
+<v Upol>And in that case, I'm kind of drawn by the social construction
+
+134
+00:09:17.970 --> 00:09:23.309
+<v Upol>of technology lenses, something pioneered by way, a biker,
+
+135
+00:09:23.310 --> 00:09:25.889
+<v Upol>and he talked about relevant social groups.
+
+136
+00:09:25.890 --> 00:09:30.299
+<v Upol>So in any piece of technology, you will have relevant social groups in that.
+
+137
+00:09:30.300 --> 00:09:34.979
+<v Upol>Is why they was talking about bicycles, so bicycles have very other social
+
+138
+00:09:34.980 --> 00:09:39.719
+<v Upol>groups, and each relevant social groups are these are stakeholders
+
+139
+00:09:39.720 --> 00:09:44.249
+<v Upol>who have skin in the game actually give meaning to the technology as much as the
+
+140
+00:09:44.250 --> 00:09:46.379
+<v Upol>technology gives meaning to the rights of.
+
+141
+00:09:46.380 --> 00:09:50.969
+<v Upol>If you think about the mountain bikes and BMX bikes now, you know, like
+
+142
+00:09:50.970 --> 00:09:53.909
+<v Upol>racing bikes on different bikes.
+
+143
+00:09:53.910 --> 00:09:55.859
+<v Upol>And it's because of the stakeholders.
+
+144
+00:09:55.860 --> 00:09:59.759
+<v Upol>They get very different, meaning all of them are bicycles, but they look very different.
+
+145
+00:09:59.760 --> 00:10:05.189
+<v Upol>And I think within explainability we have people from the algorithmic side,
+
+146
+00:10:05.190 --> 00:10:09.479
+<v Upol>basically the items from the HCI side.
+
+147
+00:10:09.480 --> 00:10:13.919
+<v Upol>And now we are having stakeholders in the public policy side, in the regulation
+
+148
+00:10:13.920 --> 00:10:15.839
+<v Upol>side, in the auditing side.
+
+149
+00:10:15.840 --> 00:10:20.549
+<v Upol>So I think each of these stakeholders are also adding their own lenses to what is
+
+150
+00:10:20.550 --> 00:10:24.389
+<v Upol>explainable and which is why you will see a lot of flux.
+
+151
+00:10:25.440 --> 00:10:29.879
+<v Andrey>Yeah, it's super interesting seeing this field kind of grow, and there's
+
+152
+00:10:29.880 --> 00:10:32.999
+<v Andrey>so much area to cover that.
+
+153
+00:10:33.000 --> 00:10:36.869
+<v Andrey>I think, you know, maybe compared to selling computer here.
+
+154
+00:10:36.870 --> 00:10:42.029
+<v Andrey>And you know, I think there's a lot more kind of maybe foundational
+
+155
+00:10:42.030 --> 00:10:44.880
+<v Andrey>or at least a conceptually
+
+156
+00:10:46.650 --> 00:10:50.969
+<v Andrey>important work. And then we'll get into what I think are yours and they could be could be
+
+157
+00:10:50.970 --> 00:10:53.789
+<v Andrey>called that. Yeah, your journey is really interesting.
+
+158
+00:10:53.790 --> 00:10:58.419
+<v Andrey>It's always fun to hear about how people bring in their experience before
+
+159
+00:10:58.420 --> 00:11:03.329
+<v Andrey>repeatedly and how that sort of guides their their direction.
+
+160
+00:11:03.330 --> 00:11:06.609
+<v Andrey>In my case, I started in robotics, in high school and then, you know, I did it in
+
+161
+00:11:06.610 --> 00:11:11.429
+<v Andrey>college. And then, you know, even when I went in some of the interactions and I
+
+162
+00:11:11.430 --> 00:11:16.199
+<v Andrey>came back to it. So it's always interesting to see how it happens.
+
+163
+00:11:16.200 --> 00:11:18.509
+<v Upol>I love that story because it's weird, right?
+
+164
+00:11:18.510 --> 00:11:22.109
+<v Upol>Because I have an undergrad, I have a like a B.S.
+
+165
+00:11:22.110 --> 00:11:24.029
+<v Upol>in electrical engineering and a B.A.
+
+166
+00:11:24.030 --> 00:11:28.829
+<v Upol>in philosophy, right? And I never thought I would use that philosophy degree
+
+167
+00:11:28.830 --> 00:11:33.049
+<v Upol>on a daily basis as much as I use it today.
+
+168
+00:11:33.050 --> 00:11:37.579
+<v Upol>In fact, my edge in explainable air actually comes
+
+169
+00:11:37.580 --> 00:11:42.019
+<v Upol>from my philosophy training because I can't access
+
+170
+00:11:42.020 --> 00:11:45.589
+<v Upol>the writing that is coming from the air because even as academics are part of our
+
+171
+00:11:45.590 --> 00:11:49.399
+<v Upol>training is how to read a certain body of work.
+
+172
+00:11:49.400 --> 00:11:52.700
+<v Upol>But then when you're also trained in computer science, you can bridge it.
+
+173
+00:11:53.870 --> 00:11:58.249
+<v Upol>And I think there is something to be said there, especially for PhD student or other
+
+174
+00:11:58.250 --> 00:12:02.749
+<v Upol>practitioners and researchers. Listening is I have been my mentors have always
+
+175
+00:12:02.750 --> 00:12:07.669
+<v Upol>said like, you know, if you really want to make a name, pick an area and pick an Area B
+
+176
+00:12:07.670 --> 00:12:12.769
+<v Upol>and then intersect them and you might actually get a C that is
+
+177
+00:12:12.770 --> 00:12:17.239
+<v Upol>has a has an interesting angle to it that makes your work more relevant, more
+
+178
+00:12:17.240 --> 00:12:22.009
+<v Upol>impactful. So I love also your story about robotics and how your back full circle.
+
+179
+00:12:22.010 --> 00:12:26.509
+<v Upol>I think many of us in some ways are at the other end up where our
+
+180
+00:12:26.510 --> 00:12:28.459
+<v Upol>interest kind of started.
+
+181
+00:12:28.460 --> 00:12:30.919
+<v Andrey>Yeah, for sure. It's it's quite interesting.
+
+182
+00:12:30.920 --> 00:12:35.359
+<v Andrey>You know, I worked in robotics a lot in undergrad and I worked a lot and then were kind
+
+183
+00:12:35.360 --> 00:12:38.779
+<v Andrey>of classical robotic algorithms not knowing you all nets.
+
+184
+00:12:38.780 --> 00:12:43.219
+<v Andrey>And then that definitely informed by understanding and my ability to get
+
+185
+00:12:43.220 --> 00:12:46.370
+<v Andrey>into it. So always, always call to see how that happens.
+
+186
+00:12:47.750 --> 00:12:52.519
+<v Andrey>So that's kind of my introduction to how you got here
+
+187
+00:12:52.520 --> 00:12:57.109
+<v Andrey>out of a way. Let's start diving into your work will be focusing
+
+188
+00:12:57.110 --> 00:13:02.179
+<v Andrey>a lot on a particular paper that I think is very cool.
+
+189
+00:13:02.180 --> 00:13:06.799
+<v Andrey>But before that, let's just give the listeners a bit of a conceptual
+
+190
+00:13:06.800 --> 00:13:11.569
+<v Andrey>kind of introduction to a field, I suppose, and then you general work.
+
+191
+00:13:11.570 --> 00:13:16.609
+<v Andrey>So just common basics, you know,
+
+192
+00:13:16.610 --> 00:13:21.079
+<v Andrey>quick introduction can you explain what explainability is, maybe,
+
+193
+00:13:21.080 --> 00:13:25.399
+<v Andrey>you know, and that's a pretty flat surface level and why it's important.
+
+194
+00:13:25.400 --> 00:13:29.389
+<v Upol>Yeah. So let's start with why it's important and then I'll share why what it is and I
+
+195
+00:13:29.390 --> 00:13:31.669
+<v Upol>think the importance of drives what it is.
+
+196
+00:13:31.670 --> 00:13:36.559
+<v Upol>So with with with today, like the AI powered decision making
+
+197
+00:13:36.560 --> 00:13:42.079
+<v Upol>is everywhere from radiation radiologists using
+
+198
+00:13:42.080 --> 00:13:46.759
+<v Upol>AI powered decision support systems to diagnose chest COVID pneumonia on chest
+
+199
+00:13:46.760 --> 00:13:51.469
+<v Upol>x rays right to loan officers using algorithms to
+
+200
+00:13:51.470 --> 00:13:53.510
+<v Upol>determine if you are loan worthy or not.
+
+201
+00:13:54.590 --> 00:13:58.069
+<v Upol>Do you know the recidivism cases, right?
+
+202
+00:13:58.070 --> 00:14:03.229
+<v Upol>So as we go on, more and more consequential
+
+203
+00:14:03.230 --> 00:14:08.359
+<v Upol>decisions that we are making are either powered through AI
+
+204
+00:14:08.360 --> 00:14:10.309
+<v Upol>or automated by.
+
+205
+00:14:10.310 --> 00:14:14.809
+<v Upol>So this actually creates a need for AI to be
+
+206
+00:14:14.810 --> 00:14:19.759
+<v Upol>held accountable. Like if something is doing something consequential,
+
+207
+00:14:19.760 --> 00:14:23.629
+<v Upol>I need to be able to ask why?
+
+208
+00:14:23.630 --> 00:14:28.249
+<v Upol>Hmm. And the answer to that question is where explainable AI
+
+209
+00:14:28.250 --> 00:14:33.099
+<v Upol>comes in. Broadly speaking, and many people have many different
+
+210
+00:14:33.100 --> 00:14:37.629
+<v Upol>definitions of it, at least the way our lab and I have conceptualized it
+
+211
+00:14:37.630 --> 00:14:40.479
+<v Upol>in the years of work we have done is explainable.
+
+212
+00:14:40.480 --> 00:14:45.189
+<v Upol>AI refers to the techniques, the strategies, the
+
+213
+00:14:45.190 --> 00:14:49.749
+<v Upol>philosophies that can help us
+
+214
+00:14:49.750 --> 00:14:54.579
+<v Upol>as stakeholders within the AI system so it could be end users, developers,
+
+215
+00:14:54.580 --> 00:14:59.499
+<v Upol>data scientists understand why
+
+216
+00:14:59.500 --> 00:15:02.799
+<v Upol>the the system did what it did.
+
+217
+00:15:04.090 --> 00:15:08.619
+<v Speaker>And again, this is why it's also human centered in the sense that it's
+
+218
+00:15:08.620 --> 00:15:13.179
+<v Speaker>not just the algorithm, right? There's a human at the end of it trying to understand it
+
+219
+00:15:13.180 --> 00:15:15.819
+<v Speaker>so it can take many forms.
+
+220
+00:15:15.820 --> 00:15:20.409
+<v Speaker>Sometimes these explanations can be in the form of natural language, plain
+
+221
+00:15:20.410 --> 00:15:24.069
+<v Speaker>English, for instance, explanations like textual.
+
+222
+00:15:24.070 --> 00:15:28.090
+<v Speaker>Sometimes these explanations can be in the form of visualizations.
+
+223
+00:15:29.170 --> 00:15:33.609
+<v Speaker>Sometimes these explanations can be in the form of data structures,
+
+224
+00:15:33.610 --> 00:15:37.899
+<v Speaker>so they have the guts of a neural net where you are trying to figure out which layer is
+
+225
+00:15:37.900 --> 00:15:42.669
+<v Speaker>what's important. So these explanations and explainable AI
+
+226
+00:15:42.670 --> 00:15:45.099
+<v Speaker>I think the takeaway is very pluralistic.
+
+227
+00:15:45.100 --> 00:15:49.419
+<v Speaker>It's not monolithic. It's not. There's not one little thing that fits all.
+
+228
+00:15:49.420 --> 00:15:54.249
+<v Speaker>But at the core of it, it's about understanding the decision making
+
+229
+00:15:54.250 --> 00:15:58.419
+<v Speaker>in a way that makes sense to the user in a way that makes sense for the person
+
+230
+00:15:58.420 --> 00:15:59.420
+<v Speaker>interpreting it.
+
+231
+00:16:01.700 --> 00:16:06.369
+<v Andrey>That explains it. I think quite well. And I guess it's worth
+
+232
+00:16:06.370 --> 00:16:11.319
+<v Andrey>noting that this is especially difficult these days because we are working
+
+233
+00:16:11.320 --> 00:16:13.419
+<v Andrey>a lot to a Deep Learning.
+
+234
+00:16:13.420 --> 00:16:17.289
+<v Andrey>The way that works is you have a huge model of what awaits you.
+
+235
+00:16:17.290 --> 00:16:20.677
+<v Andrey>You trained on that on a dataset. And then what you get is a phase where you can throw in
+
+236
+00:16:20.678 --> 00:16:25.329
+<v Andrey>an input and get an output right, and the challenges is, now explain
+
+237
+00:16:25.330 --> 00:16:27.729
+<v Andrey>why it's doing what it's doing, right?
+
+238
+00:16:27.730 --> 00:16:32.709
+<v Upol>Absolutely. Yeah. And actually, now that brings to another point,
+
+239
+00:16:32.710 --> 00:16:37.619
+<v Upol>you know, there are many ways and then you hear different words being kind of used.
+
+240
+00:16:37.620 --> 00:16:42.609
+<v Upol>In my view, I kind of split explainability into like
+
+241
+00:16:42.610 --> 00:16:47.319
+<v Upol>transparency, interpretability kind of branches
+
+242
+00:16:47.320 --> 00:16:49.359
+<v Upol>and then post hoc explainability.
+
+243
+00:16:49.360 --> 00:16:51.549
+<v Upol>So I'll cover all eight of these.
+
+244
+00:16:51.550 --> 00:16:56.139
+<v Upol>So transparency would be almost like clear boxing it so like instead of like black
+
+245
+00:16:56.140 --> 00:17:00.699
+<v Upol>boxing it could you just make the model just completely transparent, like that's just
+
+246
+00:17:00.700 --> 00:17:01.629
+<v Upol>one of the ideal to
+
+247
+00:17:01.630 --> 00:17:03.969
+<v Andrey>understand the model itself.
+
+248
+00:17:03.970 --> 00:17:09.098
+<v Upol>Then interpretability involves, I add in my view, the able to scrutinize
+
+249
+00:17:09.099 --> 00:17:13.209
+<v Upol>an algorithm. So in other words, like like a decision tree life, like the infrastructure
+
+250
+00:17:13.210 --> 00:17:18.009
+<v Upol>or the architecture of forms, the fact that I can
+
+251
+00:17:18.010 --> 00:17:22.568
+<v Upol>poke and prod and I can get a good understanding and I can
+
+252
+00:17:22.569 --> 00:17:25.118
+<v Upol>interpret what the model is doing right.
+
+253
+00:17:25.119 --> 00:17:29.169
+<v Upol>But that also requires a level of expertize like you need to have the training to
+
+254
+00:17:29.170 --> 00:17:32.799
+<v Upol>interpret a decision tree. You cannot just, you know, you can't just give anyone on the
+
+255
+00:17:32.800 --> 00:17:35.679
+<v Upol>street like, Hey, here's a decision tree? Interpret it, right?
+
+256
+00:17:35.680 --> 00:17:40.119
+<v Speaker>So there's this level of interpretation that comes in, but the architecture
+
+257
+00:17:40.120 --> 00:17:43.389
+<v Speaker>of the model should also be able to support it.
+
+258
+00:17:43.390 --> 00:17:47.619
+<v Speaker>Not as you seem like deep learning algorithms are not really interpretive or by their
+
+259
+00:17:47.620 --> 00:17:51.519
+<v Speaker>architecture, right? Like they're not very friendly on their side.
+
+260
+00:17:51.520 --> 00:17:56.079
+<v Speaker>So recently, there has been a very big push towards what we call post hoc
+
+261
+00:17:56.080 --> 00:18:00.639
+<v Speaker>explanations. Right? So adding a layer, a model on top
+
+262
+00:18:00.640 --> 00:18:04.149
+<v Speaker>of the black box, so to speak, and make it somewhat transparent.
+
+263
+00:18:04.150 --> 00:18:09.399
+<v Speaker>So in other words, can I generate the explanation after the decision has been made?
+
+264
+00:18:09.400 --> 00:18:13.869
+<v Speaker>So those are the three main branches you see work within explainable AI these
+
+265
+00:18:13.870 --> 00:18:18.729
+<v Speaker>days, and a lot of people do use the word explainability and interpretability
+
+266
+00:18:18.730 --> 00:18:21.309
+<v Speaker>interchangeably. I don't.
+
+267
+00:18:21.310 --> 00:18:26.169
+<v Speaker>I tend to see explainability as a larger umbrella that
+
+268
+00:18:26.170 --> 00:18:30.789
+<v Speaker>can house, but doesn't mean I'm right to be honest, like it's being very precise
+
+269
+00:18:30.790 --> 00:18:32.500
+<v Speaker>about what you're saying when you're saying it.
+
+270
+00:18:33.520 --> 00:18:38.019
+<v Speaker>Does that help like kind of give the demarcation of the landscape as well the area in
+
+271
+00:18:38.020 --> 00:18:38.739
+<v Speaker>the work?
+
+272
+00:18:38.740 --> 00:18:43.059
+<v Andrey>Yeah, yeah. Of course it's it's interesting that at least you can think of it in these
+
+273
+00:18:43.060 --> 00:18:46.780
+<v Andrey>different dimensions, and I think that also helps understand sort of
+
+274
+00:18:47.870 --> 00:18:50.289
+<v Andrey>the ways you might approach it.
+
+275
+00:18:50.290 --> 00:18:54.879
+<v Andrey>And speaking of that, as you introduced in the intro,
+
+276
+00:18:54.880 --> 00:18:59.529
+<v Andrey>your work focuses in particular on human centered XAI, which
+
+277
+00:18:59.530 --> 00:19:03.809
+<v Andrey>is in some ways in contrast to algorithm centered XAI.
+
+278
+00:19:03.810 --> 00:19:08.229
+<v Andrey>So what is human centered XAI, in your view?
+
+279
+00:19:08.230 --> 00:19:10.239
+<v Andrey>Again, as kind of a surface level?
+
+280
+00:19:10.240 --> 00:19:15.039
+<v Upol>Yeah, it's about, I guess, the way to kind of think about Incentive XAI
+
+281
+00:19:15.040 --> 00:19:19.599
+<v Upol>is the following like, there is a myth often in explainable AI, where we
+
+282
+00:19:19.600 --> 00:19:24.219
+<v Upol>tend to think that if we could just open the black box, everything
+
+283
+00:19:24.220 --> 00:19:25.569
+<v Upol>will be fine. Right?
+
+284
+00:19:26.770 --> 00:19:29.299
+<v Upol>And my my my response to the myth is also.
+
+285
+00:19:29.300 --> 00:19:34.339
+<v Upol>And not everything that matters actually is inside the box.
+
+286
+00:19:34.340 --> 00:19:39.229
+<v Upol>Why? Because humans don't live inside the black box office, they're outside
+
+287
+00:19:39.230 --> 00:19:40.909
+<v Upol>and around it.
+
+288
+00:19:40.910 --> 00:19:45.499
+<v Upol>And given, you know, humans are so
+
+289
+00:19:45.500 --> 00:19:48.259
+<v Upol>instrumental in this ecosystem, right?
+
+290
+00:19:50.030 --> 00:19:55.039
+<v Upol>It might not be a bad idea to start looking around the box to understand
+
+291
+00:19:55.040 --> 00:20:00.619
+<v Upol>what are these value systems? What are people's ways of thinking that can ultimately
+
+292
+00:20:00.620 --> 00:20:05.809
+<v Upol>aid that understanding ability that is so instrumental, explainable and
+
+293
+00:20:05.810 --> 00:20:11.299
+<v Upol>so human centered, explainable AI? What it does is it fundamentally shifts the attention,
+
+294
+00:20:11.300 --> 00:20:15.699
+<v Upol>and it doesn't say that algorithm centered work is bad by any means.
+
+295
+00:20:15.700 --> 00:20:20.449
+<v Upol>It's not saying that what we're saying is we need to put just as much
+
+296
+00:20:20.450 --> 00:20:25.519
+<v Upol>attention on the human on who is opening the box
+
+297
+00:20:25.520 --> 00:20:27.889
+<v Upol>as much as opening the box.
+
+298
+00:20:27.890 --> 00:20:32.779
+<v Andrey>Right? Do you need to sort of pay attention, care about the human aspect
+
+299
+00:20:32.780 --> 00:20:37.279
+<v Andrey>and not just think about the model, And then, you know, maybe we
+
+300
+00:20:37.280 --> 00:20:41.839
+<v Andrey>humans can take what you develop a model later and they can figure it out.
+
+301
+00:20:41.840 --> 00:20:46.279
+<v Andrey>That makes a lot of sense, and you have a great motivating example
+
+302
+00:20:46.280 --> 00:20:51.229
+<v Andrey>of this in your Gradient article having to do with this
+
+303
+00:20:51.230 --> 00:20:56.209
+<v Andrey>Fire Wall management thing and why human centered aspect was necessary.
+
+304
+00:20:56.210 --> 00:20:58.279
+<v Andrey>So, yeah, I find that very cool.
+
+305
+00:20:58.280 --> 00:21:00.079
+<v Andrey>Can you go ahead?
+
+306
+00:21:00.080 --> 00:21:04.609
+<v Upol>Yeah. So this was a this was a consulting project, but I had
+
+307
+00:21:04.610 --> 00:21:07.609
+<v Upol>the privilege of kind of helping out with.
+
+308
+00:21:07.610 --> 00:21:12.259
+<v Upol>They had a cybersecurity company, had hired me to address a very interesting
+
+309
+00:21:12.260 --> 00:21:15.519
+<v Upol>issue of this firewall management system.
+
+310
+00:21:15.520 --> 00:21:20.009
+<v Upol>And in that environment, one thing that happens is the problem was
+
+311
+00:21:20.010 --> 00:21:22.279
+<v Upol>that bloat. So what is it? Bloat?
+
+312
+00:21:22.280 --> 00:21:27.499
+<v Upol>Bloat is what happens when people open course on a firewall and forget to close them.
+
+313
+00:21:27.500 --> 00:21:31.669
+<v Upol>So over time, you get a bunch of stuff that is open.
+
+314
+00:21:31.670 --> 00:21:36.139
+<v Upol>But then what happens is at an enterprise scale, there is so many
+
+315
+00:21:36.140 --> 00:21:40.579
+<v Upol>open course that is humanly impossible to go to every one of them and check.
+
+316
+00:21:40.580 --> 00:21:45.799
+<v Upol>Oh, wow. Right. So they had a system that would analyze all these ports
+
+317
+00:21:45.800 --> 00:21:51.289
+<v Upol>and suggest which ones do remain closed versus which ones do remain open.
+
+318
+00:21:51.290 --> 00:21:55.729
+<v Upol>The problem was the problem here was rather tricky.
+
+319
+00:21:55.730 --> 00:22:00.439
+<v Upol>The system was actually performing rather well around the 90 percent accuracy.
+
+320
+00:22:00.440 --> 00:22:04.039
+<v Upol>It had really good algorithmic transparency.
+
+321
+00:22:04.040 --> 00:22:09.549
+<v Upol>But the problem was, less than two percent of the workforce
+
+322
+00:22:09.550 --> 00:22:12.549
+<v Upol>was actually engaging with it and using it.
+
+323
+00:22:14.090 --> 00:22:17.059
+<v Andrey>Yeah, and that's not what you want.
+
+324
+00:22:17.060 --> 00:22:18.979
+<v Andrey>Yeah, and then what was that?
+
+325
+00:22:18.980 --> 00:22:19.699
+<v Andrey>Yeah.
+
+326
+00:22:19.700 --> 00:22:24.229
+<v Upol>So and you know, I was brought in with the task of
+
+327
+00:22:24.230 --> 00:22:28.159
+<v Upol>fixing this and the assumption was still back then and this was before we kind of coined
+
+328
+00:22:28.160 --> 00:22:32.419
+<v Upol>the term Human-Centered XAI. And this is the project that actually drives a lot of that
+
+329
+00:22:32.420 --> 00:22:37.339
+<v Upol>thinking. And the assumption was, you know, maybe the solution is within the algorithm,
+
+330
+00:22:37.340 --> 00:22:41.989
+<v Upol>just fix the algorithm, maybe make it explain better, maybe open the box
+
+331
+00:22:41.990 --> 00:22:43.369
+<v Upol>differently, so to speak.
+
+332
+00:22:44.900 --> 00:22:49.549
+<v Upol>And what I found at the end of the day just to give a cut the long story
+
+333
+00:22:49.550 --> 00:22:54.109
+<v Upol>short, I guess, is, there was nothing that was
+
+334
+00:22:54.110 --> 00:22:56.509
+<v Upol>wrong with the algorithm.
+
+335
+00:22:56.510 --> 00:23:01.129
+<v Upol>The explainability that this company was looking for was
+
+336
+00:23:01.130 --> 00:23:05.240
+<v Upol>at the intersection of the human and the machine not included in the machine.
+
+337
+00:23:06.290 --> 00:23:10.789
+<v Upol>So what we found in this project presumption was still that
+
+338
+00:23:10.790 --> 00:23:14.059
+<v Upol>something must be wrong with the algorithm. This was before we had coined the term
+
+339
+00:23:14.060 --> 00:23:18.949
+<v Upol>Human-Centered XAI. A lot of the work here actually drove the philosophy
+
+340
+00:23:18.950 --> 00:23:23.929
+<v Upol>behind it. And one thing that that came up was
+
+341
+00:23:23.930 --> 00:23:28.489
+<v Upol>nothing was actually like we couldn't do much at the algorithmic
+
+342
+00:23:28.490 --> 00:23:33.199
+<v Upol>level that helped the explainability of the system, the changes
+
+343
+00:23:33.200 --> 00:23:37.879
+<v Upol>that had to be done, which actually I think we'll get into when we discuss the expanding
+
+344
+00:23:37.880 --> 00:23:42.469
+<v Upol>explainability paper is at the social level.
+
+345
+00:23:42.470 --> 00:23:47.359
+<v Upol>So what was the problem here was people had no idea
+
+346
+00:23:47.360 --> 00:23:52.879
+<v Upol>how to calibrate their trust on this system that
+
+347
+00:23:52.880 --> 00:23:58.129
+<v Upol>without really understanding how others are also interacting with the system.
+
+348
+00:23:58.130 --> 00:24:01.879
+<v Upol>Right. So for instance, if I'm faced with a new system and there is no notion of the
+
+349
+00:24:01.880 --> 00:24:03.949
+<v Upol>ground truth, right?
+
+350
+00:24:03.950 --> 00:24:08.539
+<v Upol>And the easiest example to share here was there was a young analyst and I'm using
+
+351
+00:24:08.540 --> 00:24:11.810
+<v Upol>pseudonyms like Julie and Julie
+
+352
+00:24:13.010 --> 00:24:18.289
+<v Upol>had a recommendation from the AI system and to close a few ports.
+
+353
+00:24:18.290 --> 00:24:20.890
+<v Upol>And on paper, the recommendation was not wrong.
+
+354
+00:24:22.070 --> 00:24:26.299
+<v Upol>I have suggested that, hey, you know, if you close these ports because they have been
+
+355
+00:24:26.300 --> 00:24:29.899
+<v Upol>open for a long time, they have not been used. So technically, these are not bad
+
+356
+00:24:29.900 --> 00:24:34.429
+<v Upol>suggestions. Julie, not knowing a lot of the institutional history and
+
+357
+00:24:34.430 --> 00:24:37.640
+<v Upol>how things are done accepted this decision.
+
+358
+00:24:38.700 --> 00:24:41.849
+<v Upol>Two weeks later, the company faced a breach.
+
+359
+00:24:43.240 --> 00:24:46.200
+<v Upol>And then lost around $2 billion in one.
+
+360
+00:24:47.810 --> 00:24:52.939
+<v Upol>What had happened was Julie had accidentally closed
+
+361
+00:24:52.940 --> 00:24:56.419
+<v Upol>following the A's recommendation, the backup center reports.
+
+362
+00:24:56.420 --> 00:25:00.859
+<v Upol>Right. So because their backups are reports, of course, it's good that they have not been
+
+363
+00:25:00.860 --> 00:25:04.219
+<v Upol>used, right? It is also good that they're open.
+
+364
+00:25:04.220 --> 00:25:08.749
+<v Upol>So this kind of highlights a very interesting tension here that even
+
+365
+00:25:08.750 --> 00:25:13.189
+<v Upol>though the air system was technically not right, Julie actually got
+
+366
+00:25:13.190 --> 00:25:14.299
+<v Upol>fired.
+
+367
+00:25:14.300 --> 00:25:16.849
+<v Upol>Oh, that's that's a shame. Yeah, yeah.
+
+368
+00:25:16.850 --> 00:25:21.319
+<v Upol>So the accountability is squarely light on the human user, even though
+
+369
+00:25:21.320 --> 00:25:25.219
+<v Upol>the human user in this case, they are not data scientist, either cybersecurity analysts,
+
+370
+00:25:25.220 --> 00:25:28.639
+<v Upol>they shouldn't have to know how this guy is working.
+
+371
+00:25:28.640 --> 00:25:33.739
+<v Upol>So it's very hard in real world situations to answer the following question
+
+372
+00:25:33.740 --> 00:25:36.529
+<v Upol>one does this AI not know,
+
+373
+00:25:38.240 --> 00:25:42.799
+<v Upol>right? And to address that question is almost an unknown, unknown,
+
+374
+00:25:42.800 --> 00:25:43.800
+<v Upol>right?
+
+375
+00:25:44.210 --> 00:25:48.649
+<v Upol>You need and in this case, in this case study, they needed this thing.
+
+376
+00:25:48.650 --> 00:25:53.239
+<v Upol>What the socio organizational context to help them understand how are other
+
+377
+00:25:53.240 --> 00:25:57.709
+<v Upol>people dealing with it and and watching how others are acting with it, they were able
+
+378
+00:25:57.710 --> 00:26:02.209
+<v Upol>to develop more robust mental models of how to calibrate
+
+379
+00:26:02.210 --> 00:26:06.829
+<v Upol>that trust on the system. In other words, which are the situations that I want
+
+380
+00:26:06.830 --> 00:26:11.119
+<v Upol>to see really well and which are the situations that AI does not perform really well
+
+381
+00:26:11.120 --> 00:26:15.619
+<v Upol>because even if the performance is not uniform, that's the other reality in these real
+
+382
+00:26:15.620 --> 00:26:17.179
+<v Upol>world systems.
+
+383
+00:26:17.180 --> 00:26:21.829
+<v Upol>So that's just, you know, just a quick summarization of this out of that case
+
+384
+00:26:21.830 --> 00:26:26.359
+<v Upol>study, which kind of showed me that there were elements outside the black
+
+385
+00:26:26.360 --> 00:26:31.009
+<v Upol>box that we really needed to incorporate in the decision making
+
+386
+00:26:31.010 --> 00:26:35.509
+<v Upol>to help decision makers do it right and to
+
+387
+00:26:35.510 --> 00:26:40.699
+<v Upol>make sure accountability was shared rather than be inappropriately placed
+
+388
+00:26:40.700 --> 00:26:43.879
+<v Upol>all on the human and nothing on the machine.
+
+389
+00:26:43.880 --> 00:26:49.099
+<v Andrey>Yeah, yeah, it's interesting. I think a lot of listeners might now appreciate
+
+390
+00:26:49.100 --> 00:26:53.719
+<v Andrey>the importance of this kind of work in terms of, you know, outcome come here.
+
+391
+00:26:53.720 --> 00:26:58.249
+<v Andrey>And I think we'll dig in a bit more into where you want are in terms
+
+392
+00:26:58.250 --> 00:27:01.279
+<v Andrey>of how you do it, which was really interesting.
+
+393
+00:27:02.390 --> 00:27:06.889
+<v Andrey>Now, with a lot of these concepts laid out before we get into kind
+
+394
+00:27:06.890 --> 00:27:12.979
+<v Andrey>of our main focus, I thought it'd be fun to walk through kind of your
+
+395
+00:27:12.980 --> 00:27:17.809
+<v Andrey>journey in some sense of your trajectory, starting out
+
+396
+00:27:17.810 --> 00:27:22.549
+<v Andrey>less human centered and then sort of discovering that and more and more coming closer
+
+397
+00:27:22.550 --> 00:27:24.499
+<v Andrey>to where you are now.
+
+398
+00:27:24.500 --> 00:27:29.749
+<v Andrey>So first, you had kind of, let's say, a more traditional maybe
+
+399
+00:27:29.750 --> 00:27:34.579
+<v Andrey>XAI called rationalization and neural machine translation approach
+
+400
+00:27:34.580 --> 00:27:38.269
+<v Andrey>to generating natural language explanations.
+
+401
+00:27:38.270 --> 00:27:42.739
+<v Andrey>So just in brief, you know, what was this paper and sort of
+
+402
+00:27:42.740 --> 00:27:46.039
+<v Andrey>what was the contribution there?
+
+403
+00:27:46.040 --> 00:27:50.449
+<v Upol>No, thank you for asking that. I think this is the phase in my dissertation that I call
+
+404
+00:27:50.450 --> 00:27:52.339
+<v Upol>turn to the machine. Mm hmm.
+
+405
+00:27:52.340 --> 00:27:56.809
+<v Upol>I've kind of takes a few turns in this turn to the machine
+
+406
+00:27:56.810 --> 00:27:59.149
+<v Upol>mark and I kind of end Brandt.
+
+407
+00:27:59.150 --> 00:28:02.389
+<v Upol>So I just when I thought on my coauthors like Brant Harrison, who is at the University of
+
+408
+00:28:02.390 --> 00:28:07.369
+<v Upol>Kentucky, Marl Riedl, obviously his tech and
+
+409
+00:28:07.370 --> 00:28:11.959
+<v Upol>per now is also now I think is a PhD Student at Georgia Tech and Larry Chen,
+
+410
+00:28:11.960 --> 00:28:14.359
+<v Upol>who is now graduated from Georgia Tech.
+
+411
+00:28:14.360 --> 00:28:18.949
+<v Upol>We kind of started thinking that, you know, wouldn't
+
+412
+00:28:18.950 --> 00:28:23.569
+<v Upol>it be nice if the AI system talk to you
+
+413
+00:28:23.570 --> 00:28:25.789
+<v Upol>or thought out loud in plain English?
+
+414
+00:28:27.140 --> 00:28:32.359
+<v Upol>And the reason why we kind of thought about that was, Hey, I'm
+
+415
+00:28:32.360 --> 00:28:37.159
+<v Upol>not everyone has the background to interpret models, right?
+
+416
+00:28:37.160 --> 00:28:41.629
+<v Upol>And our a lot of our end users are not AI experts, but
+
+417
+00:28:41.630 --> 00:28:45.739
+<v Upol>everyone, if they can speak and read and write in English, could understand English,
+
+418
+00:28:45.740 --> 00:28:48.499
+<v Upol>right? In fact, that's how we even communicate.
+
+419
+00:28:48.500 --> 00:28:53.929
+<v Upol>So I in this paper actually do a lot of inspiration from
+
+420
+00:28:53.930 --> 00:28:57.199
+<v Upol>philosophy of language, namely the work of Jerry Fodor
+
+421
+00:28:58.430 --> 00:29:03.469
+<v Upol>to kind of and work with Brant to kind of develop the algorithmic infrastructure
+
+422
+00:29:03.470 --> 00:29:05.929
+<v Upol>to answer the following question.
+
+423
+00:29:05.930 --> 00:29:10.319
+<v Upol>And then this is the question that is asked me in this paper Can we?
+
+424
+00:29:10.320 --> 00:29:15.169
+<v Upol>This is almost like an existence proof, like can we generate rationales
+
+425
+00:29:15.170 --> 00:29:18.829
+<v Upol>from using a neural machine translation approach?
+
+426
+00:29:18.830 --> 00:29:20.809
+<v Upol>And this was the first one.
+
+427
+00:29:20.810 --> 00:29:24.859
+<v Upol>Yeah, to our knowledge, that uses an NMT mechanism.
+
+428
+00:29:24.860 --> 00:29:29.329
+<v Upol>Instead of translating from like English to Bengali, like
+
+429
+00:29:29.330 --> 00:29:33.799
+<v Upol>natural language to natural language, we we felt what if we replace one of the natural
+
+430
+00:29:33.800 --> 00:29:36.589
+<v Upol>languages with some data structures? Right, right.
+
+431
+00:29:36.590 --> 00:29:38.659
+<v Upol>And that's the insight in this case.
+
+432
+00:29:38.660 --> 00:29:42.829
+<v Upol>And the innovation was we were able to back in the day, like when this paper was
+
+433
+00:29:42.830 --> 00:29:47.329
+<v Upol>published back in 2017 18, there was a lot of work going on automated image.
+
+434
+00:29:47.330 --> 00:29:52.099
+<v Upol>Captioning and stuff like that, but very little work was done on
+
+435
+00:29:52.100 --> 00:29:54.679
+<v Upol>sequential decision making, right?
+
+436
+00:29:54.680 --> 00:29:58.999
+<v Upol>So like, you know, if you can think of robotics, right, like getting a robot from one
+
+437
+00:29:59.000 --> 00:30:04.069
+<v Upol>point in the kitchen to be in the kitchen is a sequential decision making task.
+
+438
+00:30:04.070 --> 00:30:09.709
+<v Upol>So we actually took a sequential decision making environment and need an agent
+
+439
+00:30:09.710 --> 00:30:14.179
+<v Upol>navigate it while being able to think out loud in
+
+440
+00:30:14.180 --> 00:30:15.019
+<v Upol>plain English.
+
+441
+00:30:15.020 --> 00:30:18.929
+<v Andrey>If I remember correctly, this was like the game frogger?
+
+442
+00:30:18.930 --> 00:30:23.539
+<v Upol>Yes, yes. Yes. So that that was an homage to a lot of the game
+
+443
+00:30:23.540 --> 00:30:28.069
+<v Upol>work that goes at the entertainment intelligent and Human-Centered AI Lab at Georgia
+
+444
+00:30:28.070 --> 00:30:32.719
+<v Upol>Tech. So we kind of leveraged a lot of our game AI history, which I know,
+
+445
+00:30:32.720 --> 00:30:36.139
+<v Upol>you know, I know you were at Georgia Tech for undergrad, so I think you might also be
+
+446
+00:30:36.140 --> 00:30:37.729
+<v Upol>familiar with a bit of that.
+
+447
+00:30:37.730 --> 00:30:42.529
+<v Andrey>Oh, yeah, yeah, yeah. And yeah, Froger is a fine example because it's pretty intuitive,
+
+448
+00:30:42.530 --> 00:30:48.049
+<v Andrey>right? You know, why do you want to jump forward well as a car racing towards
+
+449
+00:30:48.050 --> 00:30:49.050
+<v Andrey>me so I wanna avoid it.
+
+450
+00:30:50.420 --> 00:30:54.199
+<v Andrey>Yeah, but that was a cool start and certainly interesting.
+
+451
+00:30:54.200 --> 00:30:59.479
+<v Andrey>But since when you have moved more towards the human-centered aspect,
+
+452
+00:30:59.480 --> 00:31:04.159
+<v Andrey>so that's going to the next step, I suppose return to the human,
+
+453
+00:31:04.160 --> 00:31:08.659
+<v Andrey>which I think started with this other paper automated rationale generation kind
+
+454
+00:31:08.660 --> 00:31:13.189
+<v Andrey>of extending this, but then a technique for explainable AI and its effects
+
+455
+00:31:13.190 --> 00:31:14.190
+<v Andrey>on human perception.
+
+456
+00:31:15.650 --> 00:31:17.929
+<v Andrey>So how did that come about?
+
+457
+00:31:17.930 --> 00:31:22.489
+<v Upol>So, yeah, so this one, so after we ask the question, can we generate?
+
+458
+00:31:22.490 --> 00:31:26.899
+<v Upol>And the answer was yes. Now we ask the question, OK.
+
+459
+00:31:26.900 --> 00:31:30.689
+<v Upol>These generated rationales, are they any good, right?
+
+460
+00:31:30.690 --> 00:31:35.209
+<v Upol>Like because back then, if you think about how we used to evaluate these
+
+461
+00:31:35.210 --> 00:31:40.489
+<v Upol>generative systems, you know, blue score or other procedural techniques
+
+462
+00:31:40.490 --> 00:31:45.139
+<v Upol>are good, but we don't really get a sense of how good they are to human beings.
+
+463
+00:31:45.140 --> 00:31:48.979
+<v Upol>Right? Like, do people actually find these plausible?
+
+464
+00:31:48.980 --> 00:31:53.479
+<v Upol>So in this paper, ours are like kind of starts to turn to the human.
+
+465
+00:31:53.480 --> 00:31:58.429
+<v Upol>We presented the first work that gave a robust
+
+466
+00:31:58.430 --> 00:32:03.829
+<v Upol>human centered use our study along certain dimensions of user perceptions
+
+467
+00:32:03.830 --> 00:32:08.389
+<v Upol>to evaluate these rationale generating systems.
+
+468
+00:32:08.390 --> 00:32:12.499
+<v Upol>And what we found was that we bridged a lot of work.
+
+469
+00:32:12.500 --> 00:32:17.209
+<v Upol>So I took all of these measures and adapted it from work in HCI
+
+470
+00:32:17.210 --> 00:32:21.889
+<v Upol>human robot interaction, as well as the technology acceptance models from back
+
+471
+00:32:21.890 --> 00:32:24.890
+<v Upol>in the 90s when automation was becoming hot.
+
+472
+00:32:25.970 --> 00:32:30.879
+<v Upol>And we found fascinating things around, not just the fact that these were plausible
+
+473
+00:32:30.880 --> 00:32:34.729
+<v Upol>in this paper. We just didn't make the Frogger kind of say things.
+
+474
+00:32:34.730 --> 00:32:39.289
+<v Upol>In one way, we were able to tweak the network in a way that I
+
+475
+00:32:39.290 --> 00:32:44.359
+<v Upol>could make Frogger talk more in detail versus, say things
+
+476
+00:32:44.360 --> 00:32:46.400
+<v Upol>more shortly in its rationales.
+
+477
+00:32:47.540 --> 00:32:52.939
+<v Upol>And we found that the level of detail also had a lot of interesting
+
+478
+00:32:52.940 --> 00:32:58.039
+<v Upol>interweaving effects on people's trust, people's confidence,
+
+479
+00:32:58.040 --> 00:33:03.019
+<v Upol>how tolerant, where they when the robots like that further failed, right?
+
+480
+00:33:03.020 --> 00:33:05.479
+<v Upol>So this was a really interesting deep dive.
+
+481
+00:33:05.480 --> 00:33:09.979
+<v Upol>And we just not only did the quality quantitative part, we did a really good qualitative
+
+482
+00:33:09.980 --> 00:33:13.369
+<v Upol>part as well. These are the crowd workers.
+
+483
+00:33:13.370 --> 00:33:17.839
+<v Upol>And, you know, getting Amazon Mechanical Turk first to take a
+
+484
+00:33:17.840 --> 00:33:22.279
+<v Upol>forty five minute task is not easy, I think.
+
+485
+00:33:22.280 --> 00:33:24.829
+<v Upol>And so we were liking the methodology part.
+
+486
+00:33:24.830 --> 00:33:28.460
+<v Upol>I think we were very happy with it, and I'm so proud of the team that did it.
+
+487
+00:33:30.160 --> 00:33:34.789
+<v Upol>They were saying Han and another research assistant were undergrads at Georgia Tech
+
+488
+00:33:34.790 --> 00:33:39.439
+<v Upol>who helped us create a really good data collection pipeline that
+
+489
+00:33:39.440 --> 00:33:42.259
+<v Upol>helped us collect these rationales to train.
+
+490
+00:33:42.260 --> 00:33:44.719
+<v Upol>And then we not only train, but we also tested it.
+
+491
+00:33:44.720 --> 00:33:49.729
+<v Upol>So that was the end to end kind of application of this that really made the paper one
+
+492
+00:33:49.730 --> 00:33:50.904
+<v Upol>of my favorite papers that I've written.
+
+493
+00:33:52.550 --> 00:33:56.059
+<v Andrey>Yeah, is this reminds me a little bit of
+
+494
+00:33:57.530 --> 00:34:01.879
+<v Andrey>the whole like. Some field of social robotics is quite interesting because again, there's
+
+495
+00:34:01.880 --> 00:34:06.499
+<v Andrey>a lot to do with human perceptions and like, how do you communicate intent
+
+496
+00:34:06.500 --> 00:34:10.759
+<v Andrey>of grasping a couch in a way that you know, people can understand?
+
+497
+00:34:10.760 --> 00:34:14.669
+<v Andrey>Or how do you appear friendly and so on?
+
+498
+00:34:14.670 --> 00:34:19.129
+<v Andrey>That's its own whole thing, and it's always interesting to see that,
+
+499
+00:34:19.130 --> 00:34:23.779
+<v Andrey>you know, aside from all of the social models, if you need air during the real world,
+
+500
+00:34:23.780 --> 00:34:28.019
+<v Andrey>this is also a big challenge indeed.
+
+501
+00:34:28.020 --> 00:34:33.029
+<v Upol>Yes, so in this one, one aspect that differs
+
+502
+00:34:33.030 --> 00:34:37.649
+<v Upol>from the other white we'll we'll get to soon is here, you sort
+
+503
+00:34:37.650 --> 00:34:42.299
+<v Upol>of are still dealing with one to one interaction versus playing game and then the
+
+504
+00:34:42.300 --> 00:34:47.339
+<v Upol>agent is kind of trying to make it clear what's going on.
+
+505
+00:34:47.340 --> 00:34:51.779
+<v Upol>And you already mentioned in your example that you know you need and many
+
+506
+00:34:51.780 --> 00:34:55.379
+<v Upol>real war situations to go beyond that, you need organizational context.
+
+507
+00:34:55.380 --> 00:34:58.619
+<v Upol>You need to understand groups of people, so to speak.
+
+508
+00:34:58.620 --> 00:35:03.449
+<v Upol>And that takes us to the concept of socio
+
+509
+00:35:03.450 --> 00:35:04.679
+<v Upol>technical challenges.
+
+510
+00:35:06.100 --> 00:35:11.779
+<v Upol>Yes. So how did you make that turn and
+
+511
+00:35:11.780 --> 00:35:15.239
+<v Upol>what is that compared to this one to one paradigm?
+
+512
+00:35:15.240 --> 00:35:19.199
+<v Upol>Absolutely. So you hit the nail on the head, right?
+
+513
+00:35:19.200 --> 00:35:23.669
+<v Upol>There is like a lot of the way we were thinking about the rational generation or the
+
+514
+00:35:23.670 --> 00:35:26.789
+<v Upol>interaction paradigm was very much one to one.
+
+515
+00:35:26.790 --> 00:35:31.559
+<v Upol>And, you know, based on my prior work in industry settings, I started realizing
+
+516
+00:35:31.560 --> 00:35:34.530
+<v Upol>that is that truly representative of what happens.
+
+517
+00:35:35.700 --> 00:35:40.319
+<v Upol>And I started realizing that, no, we need to think more about like these
+
+518
+00:35:40.320 --> 00:35:43.199
+<v Upol>AI systems. I'm never in a vacuum.
+
+519
+00:35:43.200 --> 00:35:47.399
+<v Upol>They're often situated in larger organizational environments.
+
+520
+00:35:47.400 --> 00:35:50.219
+<v Upol>So in that case, how do we think about this?
+
+521
+00:35:50.220 --> 00:35:52.409
+<v Upol>How do we conceptualize this?
+
+522
+00:35:52.410 --> 00:35:56.939
+<v Upol>So this kind of forced us, and this is probably the first kind of conceptual
+
+523
+00:35:56.940 --> 00:36:00.569
+<v Upol>paper that I have written is to kind of outline.
+
+524
+00:36:00.570 --> 00:36:05.099
+<v Upol>So we kind of coined the term human centered essay, but we also wanted to seen
+
+525
+00:36:05.100 --> 00:36:07.349
+<v Upol>how do you operationalize this thing?
+
+526
+00:36:07.350 --> 00:36:12.149
+<v Upol>So we bridged theories from critical AI studies like critical technical
+
+527
+00:36:12.150 --> 00:36:16.709
+<v Upol>practice in HCI, like reflective design and
+
+528
+00:36:16.710 --> 00:36:21.359
+<v Upol>value sensitive design. And we kind of talked a little bit about, OK,
+
+529
+00:36:21.360 --> 00:36:25.559
+<v Upol>now we have this insight that we have to not just care about one person, but also
+
+530
+00:36:25.560 --> 00:36:28.289
+<v Upol>multiple stakeholders in the system.
+
+531
+00:36:28.290 --> 00:36:32.429
+<v Upol>So going back to the cybersecurity example, right, it's not just the analyst who is
+
+532
+00:36:32.430 --> 00:36:37.319
+<v Upol>making the decision, it's also the decision of the analysts previous
+
+533
+00:36:37.320 --> 00:36:39.719
+<v Upol>who had made similar decisions in the past.
+
+534
+00:36:39.720 --> 00:36:44.609
+<v Upol>So that kind of forced us to kind of imagine and envision AI explainable
+
+535
+00:36:44.610 --> 00:36:50.039
+<v Upol>AI paradigm that is more human centered and not just one human, but also incorporates
+
+536
+00:36:50.040 --> 00:36:51.040
+<v Upol>many humans.
+
+537
+00:36:52.240 --> 00:36:56.109
+<v Andrey>Mm hmm. Yeah, so there comes a socio technical aspect.
+
+538
+00:36:56.110 --> 00:37:00.849
+<v Andrey>You know, social being, you know, interactions between people
+
+539
+00:37:00.850 --> 00:37:02.799
+<v Andrey>and even organizations.
+
+540
+00:37:02.800 --> 00:37:07.749
+<v Andrey>So where you marry sort of the groups of people with the technical problem,
+
+541
+00:37:07.750 --> 00:37:12.009
+<v Andrey>which now you really need to think about both.
+
+542
+00:37:12.010 --> 00:37:17.149
+<v Andrey>And that as far was sort of
+
+543
+00:37:17.150 --> 00:37:21.669
+<v Andrey>kind of new direction that wasn't really the norm
+
+544
+00:37:21.670 --> 00:37:23.679
+<v Andrey>or stylish in the field.
+
+545
+00:37:23.680 --> 00:37:26.079
+<v Upol>Yeah. And I think that's a very important point.
+
+546
+00:37:26.080 --> 00:37:30.579
+<v Upol>In this case. I had drawn a lot of inspiration
+
+547
+00:37:30.580 --> 00:37:35.229
+<v Upol>from the fact literature of the fairness, accountability and transparency
+
+548
+00:37:35.230 --> 00:37:39.669
+<v Upol>literature where they were very much at that time thinking very socially or technically.
+
+549
+00:37:39.670 --> 00:37:44.529
+<v Upol>And I am always reminded of I watched this video from Microsoft Research
+
+550
+00:37:44.530 --> 00:37:48.579
+<v Upol>is like responsible. I kind of in visions.
+
+551
+00:37:48.580 --> 00:37:53.289
+<v Upol>And Hannah Wallach, who is at Amazon New York, had this fascinating
+
+552
+00:37:53.290 --> 00:37:58.119
+<v Upol>line that I cannot like repeat verbatim. But the version that I remember is today.
+
+553
+00:37:58.120 --> 00:38:02.739
+<v Upol>Our systems are AI systems are embedded in
+
+554
+00:38:02.740 --> 00:38:05.679
+<v Upol>very complex social environments.
+
+555
+00:38:05.680 --> 00:38:10.869
+<v Upol>So that means out the effects that these technical systems have
+
+556
+00:38:10.870 --> 00:38:15.339
+<v Upol>our social. So that means that fundamentally socio technical in
+
+557
+00:38:15.340 --> 00:38:18.699
+<v Upol>nature, in terms of their complexities as well as that impacts.
+
+558
+00:38:18.700 --> 00:38:23.229
+<v Upol>So when we keep that in mind, I started asking myself,
+
+559
+00:38:23.230 --> 00:38:27.879
+<v Upol>how can we get a good idea about explainable
+
+560
+00:38:27.880 --> 00:38:32.619
+<v Upol>AI if we do not take a socio technical perspective
+
+561
+00:38:32.620 --> 00:38:36.669
+<v Upol>given, you know, in the real world, that's how these systems are.
+
+562
+00:38:36.670 --> 00:38:41.229
+<v Upol>So that's actually a lot of the things that drove these socio technical lens, so to
+
+563
+00:38:41.230 --> 00:38:45.639
+<v Upol>speak. And you are right, like this was the first paper, to our knowledge, to kind of
+
+564
+00:38:45.640 --> 00:38:49.919
+<v Upol>highlight that explicitly in the context of explainable.
+
+565
+00:38:49.920 --> 00:38:52.569
+<v Andrey>I yeah, I find it interesting.
+
+566
+00:38:52.570 --> 00:38:57.909
+<v Andrey>I think it it seems like it would be easy to not have this realization
+
+567
+00:38:57.910 --> 00:39:02.709
+<v Andrey>if you come from a traditional sort of AI computer science research background
+
+568
+00:39:02.710 --> 00:39:07.509
+<v Andrey>where you just jump into a Ph.D., you know where you work, in your office,
+
+569
+00:39:07.510 --> 00:39:10.779
+<v Andrey>in the computer science building, you know, doing your research.
+
+570
+00:39:10.780 --> 00:39:14.589
+<v Andrey>And it's easy to forget sort of about the outside world.
+
+571
+00:39:14.590 --> 00:39:19.089
+<v Andrey>So I think it's interesting also that having had all this background
+
+572
+00:39:19.090 --> 00:39:23.649
+<v Andrey>outside working in actual organizations, I think I would imagine
+
+573
+00:39:23.650 --> 00:39:28.449
+<v Andrey>that also made it easier for you to get here.
+
+574
+00:39:28.450 --> 00:39:32.529
+<v Upol>Yeah, it was. And it's humbling, right? Because you fail so many times trying to do this,
+
+575
+00:39:32.530 --> 00:39:34.569
+<v Upol>and that's the only way sometimes we learn.
+
+576
+00:39:34.570 --> 00:39:39.069
+<v Upol>Right? I, you know, my consulting projects, I never like linear or straightforward
+
+577
+00:39:39.070 --> 00:39:43.719
+<v Upol>because they often reach out to me when problems are so complicated that in-house teams
+
+578
+00:39:43.720 --> 00:39:44.920
+<v Upol>need external help.
+
+579
+00:39:46.060 --> 00:39:50.469
+<v Upol>And I think, you know, a lot of us then learn the lesson that I have learned through all
+
+580
+00:39:50.470 --> 00:39:54.039
+<v Upol>of this is embracing a sense of,
+
+581
+00:39:55.360 --> 00:40:00.159
+<v Upol>you know, taking a learning mentality from a lot of the there is a famous
+
+582
+00:40:00.160 --> 00:40:04.839
+<v Upol>paper. I forget the name of the author who kind of framed mistakes
+
+583
+00:40:04.840 --> 00:40:09.849
+<v Upol>as mistakes like, you know, in a movie, you take multiple takes
+
+584
+00:40:09.850 --> 00:40:11.739
+<v Upol>and not all the takes work.
+
+585
+00:40:11.740 --> 00:40:14.229
+<v Upol>So a lot of them are mistakes, right?
+
+586
+00:40:14.230 --> 00:40:17.889
+<v Upol>So I really embrace that mentality of mistakes.
+
+587
+00:40:17.890 --> 00:40:22.509
+<v Upol>Not all projects will work out. You have a lot of mistakes, I guess.
+
+588
+00:40:22.510 --> 00:40:27.129
+<v Upol>Nothing is a mistake, per se. And I think that really helped me have a more iterative
+
+589
+00:40:27.130 --> 00:40:31.749
+<v Upol>mindset, which has paid a lot of dividends in getting a lot of this work done.
+
+590
+00:40:31.750 --> 00:40:36.459
+<v Andrey>Yeah, I think it's interesting how in some sense, especially
+
+591
+00:40:36.460 --> 00:40:39.879
+<v Andrey>doing it really enforces that.
+
+592
+00:40:39.880 --> 00:40:44.409
+<v Andrey>You really have to adapt to that because you got to have failures,
+
+593
+00:40:44.410 --> 00:40:48.339
+<v Andrey>but almost always will inform your understanding and ultimately guide you to something
+
+594
+00:40:48.340 --> 00:40:50.040
+<v Andrey>interesting, ideally, you know.
+
+595
+00:40:51.400 --> 00:40:51.609
+<v Andrey>Yeah.
+
+596
+00:40:51.610 --> 00:40:56.379
+<v Andrey>So as you did research that led to
+
+597
+00:40:56.380 --> 00:41:00.939
+<v Andrey>this paper, human centered explainable AI towards a reflective
+
+598
+00:41:00.940 --> 00:41:05.469
+<v Andrey>socio technical approach where you lay a lot of groundwork for how you
+
+599
+00:41:05.470 --> 00:41:07.809
+<v Andrey>can move towards that.
+
+600
+00:41:07.810 --> 00:41:10.599
+<v Andrey>And we we really can't get too much into it.
+
+601
+00:41:10.600 --> 00:41:12.939
+<v Andrey>It's it's quite detailed and self.
+
+602
+00:41:12.940 --> 00:41:17.529
+<v Andrey>But he did write this excellent piece on a gradient towards human
+
+603
+00:41:17.530 --> 00:41:21.249
+<v Andrey>centered, explainable AI every journey so far.
+
+604
+00:41:21.250 --> 00:41:26.049
+<v Andrey>So we're going to link to that in the description, and you can just fly a gradient
+
+605
+00:41:26.050 --> 00:41:28.449
+<v Andrey>and recommend you read that.
+
+606
+00:41:28.450 --> 00:41:33.459
+<v Andrey>But for now, we're going to actually focus on a more recent work expanding explainability
+
+607
+00:41:33.460 --> 00:41:37.810
+<v Andrey>towards social transparency in AI systems.
+
+608
+00:41:39.100 --> 00:41:43.059
+<v Andrey>So to get into it before even getting to any of the details,
+
+609
+00:41:44.350 --> 00:41:49.179
+<v Andrey>you know, what was your goal in starting this project and sort of a problem that
+
+610
+00:41:49.180 --> 00:41:50.180
+<v Andrey>motivated it?
+
+611
+00:41:51.130 --> 00:41:56.199
+<v Upol>This is. Frankly, I feel like this was the paper that, like
+
+612
+00:41:56.200 --> 00:42:00.549
+<v Upol>the Human-Centered AI paper, was the paper that needed to be written first for me to
+
+613
+00:42:00.550 --> 00:42:05.169
+<v Upol>actually write this paper. And you know, a lot of the work in that cybersecurity
+
+614
+00:42:05.170 --> 00:42:08.169
+<v Upol>company kind of really informed this.
+
+615
+00:42:08.170 --> 00:42:12.399
+<v Upol>So, you know, for the longest time, I have been kind of arguing that we need to look
+
+616
+00:42:12.400 --> 00:42:14.000
+<v Upol>outside the box, right?
+
+617
+00:42:15.100 --> 00:42:19.509
+<v Upol>Yeah. So then, you know, largely speaking, the community will come back and ask her to
+
+618
+00:42:19.510 --> 00:42:23.439
+<v Upol>call. I kind of get what you're trying to say, but what outside?
+
+619
+00:42:23.440 --> 00:42:25.859
+<v Upol>What is outside? What do you want us to think about?
+
+620
+00:42:26.860 --> 00:42:31.359
+<v Upol>And the the kernel of this paper is fundamentally and as
+
+621
+00:42:31.360 --> 00:42:35.979
+<v Upol>as the title kind of says, extending explainability, it expands our
+
+622
+00:42:35.980 --> 00:42:40.749
+<v Upol>conception of explainable AI beyond
+
+623
+00:42:40.750 --> 00:42:43.689
+<v Upol>the realms of algorithmic transparency.
+
+624
+00:42:43.690 --> 00:42:48.219
+<v Upol>By doing what? By adding this new concept
+
+625
+00:42:48.220 --> 00:42:51.969
+<v Upol>called social transparency, which is actually like, not like New New in the sense that we
+
+626
+00:42:51.970 --> 00:42:55.059
+<v Upol>created it in the in the context of XXXII, it's new.
+
+627
+00:42:55.060 --> 00:42:59.309
+<v Upol>There is sort of transparency in online systems back from the 90s.
+
+628
+00:42:59.310 --> 00:43:03.969
+<v Upol>And in the paper, we kind of pay homage to a lot of those work,
+
+629
+00:43:03.970 --> 00:43:07.749
+<v Upol>but it's fundamentally making the following observation.
+
+630
+00:43:07.750 --> 00:43:13.059
+<v Upol>So within AI systems, and I think this is where it becomes very tricky when
+
+631
+00:43:13.060 --> 00:43:17.769
+<v Upol>when we say AI systems is actually somewhat of a misnomer because when we say
+
+632
+00:43:17.770 --> 00:43:22.599
+<v Upol>AI systems are a very important part is left out and it's often implicit,
+
+633
+00:43:22.600 --> 00:43:24.219
+<v Upol>which is the human part.
+
+634
+00:43:24.220 --> 00:43:28.719
+<v Upol>Implicit in AI systems are what we call human
+
+635
+00:43:28.720 --> 00:43:30.969
+<v Upol>AI assemblages. Right?
+
+636
+00:43:30.970 --> 00:43:32.889
+<v Upol>So these are two coupled points.
+
+637
+00:43:32.890 --> 00:43:38.169
+<v Upol>So ideally, what you're really going for is the explainability of this assemblage,
+
+638
+00:43:38.170 --> 00:43:41.379
+<v Upol>right? The human part of being often implicit.
+
+639
+00:43:41.380 --> 00:43:45.939
+<v Upol>But but how can you get the explainability?
+
+640
+00:43:45.940 --> 00:43:50.589
+<v Upol>All of these assemblage, these two part system, the human and the AI by just
+
+641
+00:43:50.590 --> 00:43:55.089
+<v Upol>focusing on the air and asking the question that is asking in this paper?
+
+642
+00:43:55.090 --> 00:43:58.719
+<v Upol>So then the question becomes IRA to Paul. I get it like, you know, you can add, know you
+
+643
+00:43:58.720 --> 00:44:02.649
+<v Upol>need the human part, but what about it in looking very Typekit?
+
+644
+00:44:02.650 --> 00:44:07.509
+<v Upol>So that's where if you add the transparency on the human side, we kind of introduce
+
+645
+00:44:07.510 --> 00:44:11.609
+<v Upol>this notion of social transparency in AI systems, right?
+
+646
+00:44:11.610 --> 00:44:14.349
+<v Upol>Operationalize a little bit of this in the paper.
+
+647
+00:44:14.350 --> 00:44:20.229
+<v Andrey>Right. So yeah, it's I think very interesting about this in terms of operationalizing
+
+648
+00:44:20.230 --> 00:44:24.809
+<v Andrey>that. Not only do you highlight this need, which I think is very intuitive, but
+
+649
+00:44:24.810 --> 00:44:29.229
+<v Andrey>actually exquisite talk about how to do this, how to be useful and really beyond
+
+650
+00:44:29.230 --> 00:44:33.279
+<v Andrey>technical transparency and how to integrate that.
+
+651
+00:44:33.280 --> 00:44:36.579
+<v Andrey>And actually, you know, where do you start?
+
+652
+00:44:36.580 --> 00:44:39.799
+<v Andrey>How do you how do you do it and so on, right?
+
+653
+00:44:39.800 --> 00:44:44.229
+<v Andrey>Hmm. So I guess maybe can
+
+654
+00:44:44.230 --> 00:44:47.409
+<v Andrey>we dove in a bit more about this idea of social transparency?
+
+655
+00:44:47.410 --> 00:44:49.309
+<v Andrey>Ethics is so important.
+
+656
+00:44:49.310 --> 00:44:54.249
+<v Andrey>And so we know because fancy sort of trying to understand what the
+
+657
+00:44:54.250 --> 00:44:58.989
+<v Andrey>algorithmic side of it is doing, what the model is thinking, but
+
+658
+00:44:58.990 --> 00:45:02.889
+<v Andrey>what is social rationality one of its components?
+
+659
+00:45:02.890 --> 00:45:06.109
+<v Andrey>And yeah, how should people understand it?
+
+660
+00:45:06.110 --> 00:45:08.349
+<v Upol>Yeah. Well, that's a that's a fascinating question.
+
+661
+00:45:09.370 --> 00:45:14.079
+<v Upol>So to understand social transparency, I think we have to accept
+
+662
+00:45:14.080 --> 00:45:19.239
+<v Upol>a few things. First, we have to understand and acknowledge
+
+663
+00:45:19.240 --> 00:45:23.079
+<v Upol>that work is social, right?
+
+664
+00:45:23.080 --> 00:45:27.759
+<v Upol>You know, we don't work in silos. Most of us, we work within teams.
+
+665
+00:45:27.760 --> 00:45:32.649
+<v Upol>So there meet. That means right. There is some need to add this transparency
+
+666
+00:45:32.650 --> 00:45:37.099
+<v Upol>data in an office when you're working with a team or virtually through Slack,
+
+667
+00:45:37.100 --> 00:45:41.529
+<v Upol>right? There's a lot of chatter that is going on and there is a necessity behind that.
+
+668
+00:45:41.530 --> 00:45:46.449
+<v Upol>So that is fast the the fast realization that work is social.
+
+669
+00:45:46.450 --> 00:45:50.829
+<v Upol>That means there might be a need to make that social nature a little bit transparent,
+
+670
+00:45:50.830 --> 00:45:54.819
+<v Upol>especially when we're dealing with AI mediated decision support systems.
+
+671
+00:45:54.820 --> 00:45:59.273
+<v Upol>So and you know, as we share in the paper, we were trying to.
+
+672
+00:45:59.274 --> 00:46:02.709
+<v Upol>So this is also difficult as well to some extent, right?
+
+673
+00:46:02.710 --> 00:46:07.299
+<v Upol>One of the challenges that AI researchers face is how do we know what
+
+674
+00:46:07.300 --> 00:46:12.339
+<v Upol>the future really looks like without really investing
+
+675
+00:46:12.340 --> 00:46:17.049
+<v Upol>months and months of work, building large infrastructures and models
+
+676
+00:46:17.050 --> 00:46:22.399
+<v Upol>and then realizing we're actually not very useful, but that that is a very hard
+
+677
+00:46:22.400 --> 00:46:24.759
+<v Upol>cost of doing this.
+
+678
+00:46:24.760 --> 00:46:29.769
+<v Upol>So due to kind of explain that we used this notion
+
+679
+00:46:29.770 --> 00:46:35.109
+<v Upol>of scenario based design. So this is coming from the traditions of design fiction,
+
+680
+00:46:35.110 --> 00:46:39.999
+<v Upol>as I'm drawing a lot of this actually from the theoretical underpinnings
+
+681
+00:46:40.000 --> 00:46:43.209
+<v Upol>of the human centered explainable AI paper that we just talked about.
+
+682
+00:46:43.210 --> 00:46:47.979
+<v Upol>Mm-Hmm. And so using scenario based design, we conducted
+
+683
+00:46:47.980 --> 00:46:51.339
+<v Upol>around four workshops with a lot of people.
+
+684
+00:46:51.340 --> 00:46:55.779
+<v Upol>From different technology companies, just to get a sense of what are the
+
+685
+00:46:55.780 --> 00:47:00.489
+<v Upol>things that are outside the black box that people want
+
+686
+00:47:00.490 --> 00:47:04.249
+<v Upol>when they make a decision within the AI system.
+
+687
+00:47:04.250 --> 00:47:08.709
+<v Upol>Right. So that's the workshop is meant to kind of get a more formative understanding,
+
+688
+00:47:08.710 --> 00:47:09.069
+<v Upol>right?
+
+689
+00:47:09.070 --> 00:47:13.929
+<v Andrey>What needs to be made transparent in this social system in terms of
+
+690
+00:47:13.930 --> 00:47:17.289
+<v Upol>right, because there are so many things you can make transparent, right?
+
+691
+00:47:17.290 --> 00:47:20.499
+<v Upol>Because how do you know which one is the right thing to do right?
+
+692
+00:47:20.500 --> 00:47:24.969
+<v Upol>And I think through these workshops and this is pre-COVID, so
+
+693
+00:47:24.970 --> 00:47:28.989
+<v Upol>we have the ability to kind of get in person and kind of have these workshops.
+
+694
+00:47:28.990 --> 00:47:33.579
+<v Upol>And what we learn was that out of this and this is, I think, what
+
+695
+00:47:33.580 --> 00:47:37.599
+<v Upol>we what we call in the paper, the four ws, right?
+
+696
+00:47:37.600 --> 00:47:42.159
+<v Upol>So in addition to the i's
+
+697
+00:47:42.160 --> 00:47:47.169
+<v Upol>technical transparency or algorithmic transparency, these practitioners,
+
+698
+00:47:47.170 --> 00:47:51.789
+<v Upol>data scientists, analysts and others wanted to know
+
+699
+00:47:51.790 --> 00:47:56.409
+<v Upol>for things who did what, when
+
+700
+00:47:56.410 --> 00:47:57.410
+<v Upol>and why.
+
+701
+00:47:58.180 --> 00:48:02.559
+<v Upol>So those became again, we are not saying this is the end all, be all to all social
+
+702
+00:48:02.560 --> 00:48:07.209
+<v Upol>transparency. There might be other socially transparent systems that that do very
+
+703
+00:48:07.210 --> 00:48:12.699
+<v Upol>well, but actually in the cybersecurity example, going back to that when we implemented
+
+704
+00:48:12.700 --> 00:48:15.219
+<v Upol>this aspect of who did what, when and why.
+
+705
+00:48:15.220 --> 00:48:19.899
+<v Upol>So imagine, like, you know, next to a threat, you know, close these ports,
+
+706
+00:48:19.900 --> 00:48:24.699
+<v Upol>right? Let's imagine that if Julie have social transparency, what would do we have seen?
+
+707
+00:48:24.700 --> 00:48:26.649
+<v Upol>Julie, who got fired before?
+
+708
+00:48:26.650 --> 00:48:31.149
+<v Upol>So when you get this new disease,
+
+709
+00:48:31.150 --> 00:48:35.439
+<v Upol>the air is recommending the ports to be closed and you're like, OK.
+
+710
+00:48:35.440 --> 00:48:37.539
+<v Upol>Is that true? Like, is that real or not?
+
+711
+00:48:37.540 --> 00:48:39.669
+<v Upol>I don't know if it's a false positive.
+
+712
+00:48:39.670 --> 00:48:44.199
+<v Upol>But then Julie is able to see, you know, maybe 10 other people dealing with
+
+713
+00:48:44.200 --> 00:48:46.629
+<v Upol>a very similar situation in the past.
+
+714
+00:48:46.630 --> 00:48:50.139
+<v Upol>And in one of those Julie scenes, I one of the who's right?
+
+715
+00:48:50.140 --> 00:48:54.639
+<v Upol>Maybe imagine this is Bob, and Bob is a veteran in the industry.
+
+716
+00:48:54.640 --> 00:48:59.199
+<v Upol>He's like a level three analyst, and he says,
+
+717
+00:48:59.200 --> 00:49:02.319
+<v Upol>Oh, these are backup site reports in law.
+
+718
+00:49:02.320 --> 00:49:05.529
+<v Upol>Mm. Right? So who did what?
+
+719
+00:49:05.530 --> 00:49:09.669
+<v Upol>Right? When? Maybe, let's say, three months ago?
+
+720
+00:49:09.670 --> 00:49:11.799
+<v Upol>And why? So the why is the reasoning right?
+
+721
+00:49:11.800 --> 00:49:16.269
+<v Upol>Like these are backup center reports ignored by
+
+722
+00:49:16.270 --> 00:49:20.119
+<v Upol>situating this extra piece of information that is actually capturing?
+
+723
+00:49:20.120 --> 00:49:23.319
+<v Upol>You know, one might argue, Hey, people like that seems like a bad problem.
+
+724
+00:49:23.320 --> 00:49:26.529
+<v Upol>They should've just added back to the data center, right?
+
+725
+00:49:26.530 --> 00:49:30.369
+<v Upol>That's not good. And that is where I think the critical insight lies.
+
+726
+00:49:30.370 --> 00:49:34.539
+<v Upol>There is not enough things you can add in the dataset.
+
+727
+00:49:34.540 --> 00:49:37.149
+<v Upol>It's like a golden goose chase
+
+728
+00:49:37.150 --> 00:49:39.129
+<v Andrey>because it's all inside the model, right?
+
+729
+00:49:39.130 --> 00:49:42.129
+<v Upol>Exactly. And sometimes things happen dynamically.
+
+730
+00:49:42.130 --> 00:49:45.579
+<v Upol>Remember, data sets are basically snapshots of the past.
+
+731
+00:49:46.700 --> 00:49:51.559
+<v Upol>And work norms actually change over time due to
+
+732
+00:49:51.560 --> 00:49:55.549
+<v Upol>the sensitive nature of certain cybersecurity explanation institutions.
+
+733
+00:49:55.550 --> 00:49:59.109
+<v Upol>You do not want certain things to be coded into a data set.
+
+734
+00:49:59.110 --> 00:50:02.929
+<v Upol>Right. Because what if that gets hacked, then all your secrets are out.
+
+735
+00:50:02.930 --> 00:50:08.269
+<v Upol>So there will always be elements that are not quantifiable,
+
+736
+00:50:08.270 --> 00:50:12.619
+<v Upol>that are not acceptable in a cleanly named dataset.
+
+737
+00:50:12.620 --> 00:50:17.809
+<v Upol>In those cases, those very things that are hard to quantify, hard to incorporate
+
+738
+00:50:17.810 --> 00:50:22.309
+<v Upol>often can be the difference maker between right and wrong decisions where they
+
+739
+00:50:22.310 --> 00:50:27.559
+<v Upol>are. So by adding this social transparency, you are able to inform
+
+740
+00:50:27.560 --> 00:50:32.090
+<v Upol>someone to know when to trust the AI versus not.
+
+741
+00:50:33.130 --> 00:50:37.509
+<v Andrey>Mm hmm. Yeah, exactly, and to dig a bit deeper.
+
+742
+00:50:37.510 --> 00:50:42.759
+<v Andrey>I would love to hear how did this scenario based design
+
+743
+00:50:42.760 --> 00:50:47.199
+<v Andrey>process work? I think figure one of your work is really interesting is that the
+
+744
+00:50:47.200 --> 00:50:48.220
+<v Andrey>scenario used.
+
+745
+00:50:50.020 --> 00:50:54.459
+<v Upol>So you know, in this scenario, we asked our participants to kind
+
+746
+00:50:54.460 --> 00:50:59.889
+<v Upol>of envision being in using a AI powered pricing tool
+
+747
+00:50:59.890 --> 00:51:04.599
+<v Upol>to price and access management product to a customer called
+
+748
+00:51:04.600 --> 00:51:09.219
+<v Upol>Scout. Right. So the AI kind of does its analysis and recommends that, hey,
+
+749
+00:51:09.220 --> 00:51:12.939
+<v Upol>you got to sell it at 100 bucks per month per account.
+
+750
+00:51:12.940 --> 00:51:17.589
+<v Upol>And it did also share some post-rock explanations and kind of justifies, White
+
+751
+00:51:17.590 --> 00:51:22.089
+<v Upol>said, what it's saying and that the model, the technical transparency pieces like the
+
+752
+00:51:22.090 --> 00:51:25.419
+<v Upol>item, the quotable goes off a salesperson into account.
+
+753
+00:51:25.420 --> 00:51:29.709
+<v Upol>It did a comparative pricing of what similar customers pray, and also it gave you the
+
+754
+00:51:29.710 --> 00:51:33.249
+<v Upol>floor. So what is the cost price for doing this product?
+
+755
+00:51:33.250 --> 00:51:37.209
+<v Upol>So these are so imagine that's the first letter and today, right?
+
+756
+00:51:37.210 --> 00:51:40.779
+<v Upol>That's the state of the art. Nothing is better than that, right?
+
+757
+00:51:40.780 --> 00:51:45.579
+<v Upol>We don't have the social transparency that we kind of envision in this paper,
+
+758
+00:51:45.580 --> 00:51:47.859
+<v Upol>but that is where the state of the art was.
+
+759
+00:51:47.860 --> 00:51:51.879
+<v Upol>So that was our grounding moment. So we would ask our people as they went through the
+
+760
+00:51:51.880 --> 00:51:54.399
+<v Upol>walk to what would you do right now?
+
+761
+00:51:54.400 --> 00:51:57.329
+<v Upol>Do you think this is, you know, before we showed them any social transparency?
+
+762
+00:51:57.330 --> 00:52:01.449
+<v Upol>Right? And we will see that most people agree with that.
+
+763
+00:52:01.450 --> 00:52:04.959
+<v Upol>Yeah, this seems like a decent. We also kind of calibrated the price point by asking
+
+764
+00:52:04.960 --> 00:52:08.919
+<v Upol>experts. So we kind of grounded a lot of his data, even though it's a scenario.
+
+765
+00:52:08.920 --> 00:52:13.629
+<v Upol>If it's fictional, the fiction is grounded in reality, our version of reality.
+
+766
+00:52:13.630 --> 00:52:17.629
+<v Upol>And then we told them, like, now imagine what have you found out?
+
+767
+00:52:17.630 --> 00:52:22.449
+<v Upol>And that only one out of 10 people sold this product and the recommended
+
+768
+00:52:22.450 --> 00:52:24.759
+<v Upol>price? What would you do?
+
+769
+00:52:24.760 --> 00:52:27.879
+<v Upol>And you could see our participants kind of get very interested, like those like, oh,
+
+770
+00:52:27.880 --> 00:52:32.409
+<v Upol>that's really interesting information that helps me
+
+771
+00:52:32.410 --> 00:52:36.849
+<v Upol>calibrate what to do. So then we kind of dug deeper, which is like the bullet points
+
+772
+00:52:36.850 --> 00:52:41.739
+<v Upol>three four five to share three examples of past colleagues
+
+773
+00:52:41.740 --> 00:52:47.079
+<v Upol>who have dealt with the same customer scout on similar products.
+
+774
+00:52:47.080 --> 00:52:51.609
+<v Upol>And then one of the most important comments were made by Jessica
+
+775
+00:52:51.610 --> 00:52:54.459
+<v Upol>or Jess, who's a sales director.
+
+776
+00:52:54.460 --> 00:52:58.959
+<v Upol>And it turns out Jess had rejected the recommendation, but the sale
+
+777
+00:52:58.960 --> 00:53:03.579
+<v Upol>did happen, and the comment was the most important where they say that, Hey, is
+
+778
+00:53:03.580 --> 00:53:06.310
+<v Upol>COVID 19. And this was done at the height of the pandemic.
+
+779
+00:53:08.080 --> 00:53:11.049
+<v Upol>I can't lose a long term, profitable customer.
+
+780
+00:53:11.050 --> 00:53:14.559
+<v Upol>So they offered 10 percent below the cost price.
+
+781
+00:53:14.560 --> 00:53:16.599
+<v Upol>And that's an important part, right?
+
+782
+00:53:16.600 --> 00:53:21.129
+<v Upol>That not only did they give you a discount, but just the director had
+
+783
+00:53:21.130 --> 00:53:25.869
+<v Upol>given them below the cost price and that social context
+
+784
+00:53:25.870 --> 00:53:29.169
+<v Upol>of what was going on that was outside of the algorithm, right?
+
+785
+00:53:29.170 --> 00:53:33.639
+<v Upol>Very much inform how people acted on it because remember, without any of this
+
+786
+00:53:33.640 --> 00:53:36.339
+<v Upol>context, they fell. The price was fair.
+
+787
+00:53:36.340 --> 00:53:40.989
+<v Upol>It was done the right way. You know, the justifications were right, but
+
+788
+00:53:40.990 --> 00:53:45.639
+<v Upol>very few people actually, you know, offered
+
+789
+00:53:45.640 --> 00:53:50.199
+<v Upol>the same price when they knew what others had done, especially when a director
+
+790
+00:53:50.200 --> 00:53:52.659
+<v Upol>level person had done it before.
+
+791
+00:53:52.660 --> 00:53:57.339
+<v Andrey>Yes. So in a sense, I think going back to something you mentioned, it's
+
+792
+00:53:57.340 --> 00:54:00.219
+<v Andrey>letting you know what the model doesn't know.
+
+793
+00:54:00.220 --> 00:54:04.869
+<v Andrey>Right? It doesn't know about COVID and these four W's.
+
+794
+00:54:04.870 --> 00:54:09.549
+<v Andrey>The social scenario doesn't really explain the mottoes decisions, but it
+
+795
+00:54:09.550 --> 00:54:14.229
+<v Andrey>does like to understand via a system better in the sense
+
+796
+00:54:14.230 --> 00:54:18.969
+<v Andrey>of like the AI system is situated within the organization.
+
+797
+00:54:18.970 --> 00:54:23.439
+<v Andrey>And so you get to know more its weaknesses and where and when to follow it.
+
+798
+00:54:23.440 --> 00:54:28.089
+<v Andrey>Maybe when not, which I think would be a lot harder about seeing
+
+799
+00:54:28.090 --> 00:54:30.729
+<v Andrey>like, OK, this first person accepted discrimination.
+
+800
+00:54:30.730 --> 00:54:32.110
+<v Andrey>This person didn't.
+
+801
+00:54:33.460 --> 00:54:36.819
+<v Andrey>And this figure, I think, illustrates that really well.
+
+802
+00:54:36.820 --> 00:54:41.469
+<v Upol>And I think it's kind of asking the question like, what are the eyes blind spots
+
+803
+00:54:41.470 --> 00:54:46.239
+<v Upol>and can other humans who have interacted with this system in the past and address it?
+
+804
+00:54:46.240 --> 00:54:50.949
+<v Upol>So like, for instance, I am now currently working with radiation oncologists
+
+805
+00:54:50.950 --> 00:54:54.610
+<v Upol>on a very similar project and in radiation oncology,
+
+806
+00:54:55.990 --> 00:55:00.579
+<v Upol>just like in other fields, there is no absolute ground truth.
+
+807
+00:55:00.580 --> 00:55:05.109
+<v Upol>With 80 senators, we are so comfortable with the terminology of ground truth, right?
+
+808
+00:55:05.110 --> 00:55:09.579
+<v Upol>But when it comes to using radiation to treat cancers, they're established
+
+809
+00:55:09.580 --> 00:55:14.049
+<v Upol>practices. There is no like absolute gold thing that everyone must
+
+810
+00:55:14.050 --> 00:55:16.869
+<v Upol>do because each patient is different.
+
+811
+00:55:16.870 --> 00:55:19.239
+<v Upol>Each treatment facility is different.
+
+812
+00:55:19.240 --> 00:55:20.590
+<v Upol>So in that case?
+
+813
+00:55:21.840 --> 00:55:26.339
+<v Upol>Knowing when to trust these recommendations, foreign by saying, you know, give
+
+814
+00:55:26.340 --> 00:55:30.179
+<v Upol>this much radiation to the patient's left optic nerve.
+
+815
+00:55:30.180 --> 00:55:33.449
+<v Upol>Right. That's a very high stakes decision, right?
+
+816
+00:55:33.450 --> 00:55:36.689
+<v Upol>Because if you do it the wrong way, you can blast away my left optic there and take away
+
+817
+00:55:36.690 --> 00:55:39.419
+<v Upol>my vision. Right? But guess what?
+
+818
+00:55:39.420 --> 00:55:43.859
+<v Upol>What the AI system might not have known is that the patient is blind in the
+
+819
+00:55:43.860 --> 00:55:48.629
+<v Upol>right die. So all of the calculus goes away because we know there's no like central
+
+820
+00:55:48.630 --> 00:55:51.519
+<v Upol>blindness data in randomized controlled trials.
+
+821
+00:55:51.520 --> 00:55:52.229
+<v Upol>Right?
+
+822
+00:55:52.230 --> 00:55:56.759
+<v Upol>So just knowing that extra piece can help you calibrate how
+
+823
+00:55:56.760 --> 00:56:01.189
+<v Upol>much treatment you want to give it and knowing what your peers done right, because
+
+824
+00:56:01.190 --> 00:56:05.759
+<v Upol>in these kind of communities of practices is very much community driven,
+
+825
+00:56:05.760 --> 00:56:10.349
+<v Upol>right? Like the radiation oncologist kind of have these standards
+
+826
+00:56:10.350 --> 00:56:13.199
+<v Upol>that they co-developed together are two studies.
+
+827
+00:56:13.200 --> 00:56:17.729
+<v Upol>So this social transparency starts mattering extremely when the
+
+828
+00:56:17.730 --> 00:56:21.179
+<v Upol>cost of failure is also very high, right?
+
+829
+00:56:21.180 --> 00:56:25.679
+<v Upol>Like, you know, blasting someone's optic nerve nerve out there, the radiation is a pretty
+
+830
+00:56:25.680 --> 00:56:29.969
+<v Upol>high cost rather than, you know, missing a song recommendation.
+
+831
+00:56:29.970 --> 00:56:32.669
+<v Upol>And I think that's the other part like you don't think I don't.
+
+832
+00:56:32.670 --> 00:56:37.289
+<v Upol>Social transparency is not really helpful when the stakes are low or when
+
+833
+00:56:37.290 --> 00:56:40.529
+<v Upol>the nature of the job is not very collaborative, right?
+
+834
+00:56:40.530 --> 00:56:44.429
+<v Upol>But the more the stakes are high, the more collaboration is needed.
+
+835
+00:56:44.430 --> 00:56:48.389
+<v Upol>Social transparency becomes important because what then becomes very social.
+
+836
+00:56:49.770 --> 00:56:53.100
+<v Andrey>Yeah, it's just makes me feel like you can almost
+
+837
+00:56:54.660 --> 00:56:59.279
+<v Andrey>consider this like what if the AI model is
+
+838
+00:56:59.280 --> 00:57:01.409
+<v Andrey>in some sense, a coworker, right?
+
+839
+00:57:01.410 --> 00:57:05.879
+<v Andrey>When you work with people, some people you trust more and less and when you
+
+840
+00:57:05.880 --> 00:57:08.459
+<v Andrey>do decision making, it is sort of collaborative.
+
+841
+00:57:08.460 --> 00:57:11.999
+<v Andrey>You know, you might debate, you might ask whatever you consider, address, if you consider
+
+842
+00:57:12.000 --> 00:57:16.559
+<v Andrey>that that's not something that you can do with any AI system,
+
+843
+00:57:16.560 --> 00:57:20.579
+<v Andrey>at least for now, you can't say, well, you know, have you taken this into that into
+
+844
+00:57:20.580 --> 00:57:25.649
+<v Andrey>account? But seeing the social context, it seems to me, was
+
+845
+00:57:25.650 --> 00:57:30.209
+<v Andrey>what people might have realized that to me, this comment and now, you know,
+
+846
+00:57:30.210 --> 00:57:32.039
+<v Andrey>didn't take into account the COVID thing.
+
+847
+00:57:33.390 --> 00:57:38.879
+<v Andrey>So, yeah, she gets interesting in the sense of like you get to know the system
+
+848
+00:57:38.880 --> 00:57:43.049
+<v Andrey>as another entity you work with almost.
+
+849
+00:57:43.050 --> 00:57:47.159
+<v Upol>Yeah, yeah, exactly. And I think that's kind of changes the way we think of human
+
+850
+00:57:47.160 --> 00:57:49.439
+<v Upol>collaboration, right?
+
+851
+00:57:49.440 --> 00:57:53.399
+<v Upol>Because you are now like, I often think about it, it's like, you know, Avatar The Last
+
+852
+00:57:53.400 --> 00:57:55.179
+<v Upol>Airbender. I don't know.
+
+853
+00:57:55.180 --> 00:57:55.769
+<v Andrey>Yeah, yeah.
+
+854
+00:57:55.770 --> 00:57:59.999
+<v Upol>So it's like, what does Avatar do? And new faces around there, like Avatar and right?
+
+855
+00:58:00.000 --> 00:58:04.589
+<v Upol>Like when he faces some difficult choices, he kind of seeks the counsel
+
+856
+00:58:04.590 --> 00:58:08.429
+<v Upol>of past avatars who had come before him.
+
+857
+00:58:08.430 --> 00:58:13.199
+<v Upol>And so the social transparency is in a weird way of capturing that historical
+
+858
+00:58:13.200 --> 00:58:17.669
+<v Upol>context in a system in situ
+
+859
+00:58:17.670 --> 00:58:22.529
+<v Upol>that really makes your decision making in that moment much more informed.
+
+860
+00:58:22.530 --> 00:58:26.189
+<v Upol>Because at the end of the day, we have to ask ourselves why these explanations aren't
+
+861
+00:58:26.190 --> 00:58:30.509
+<v Upol>there. They're there to make things actionable.
+
+862
+00:58:30.510 --> 00:58:35.129
+<v Upol>If you if someone cannot do something without explanation, then there might not be
+
+863
+00:58:35.130 --> 00:58:37.149
+<v Upol>any explanation, right?
+
+864
+00:58:37.150 --> 00:58:40.799
+<v Upol>Like if the machine is explaining itself and I cannot do anything with it, that's very
+
+865
+00:58:40.800 --> 00:58:45.719
+<v Upol>difficult. Like, I don't know what purpose of serving other than just understanding.
+
+866
+00:58:45.720 --> 00:58:49.229
+<v Upol>But if I understand and cannot do anything with understanding, what is it there for
+
+867
+00:58:49.230 --> 00:58:50.069
+<v Upol>anyway?
+
+868
+00:58:50.070 --> 00:58:54.599
+<v Upol>So social transparency can make things more actionable, even
+
+869
+00:58:54.600 --> 00:58:57.199
+<v Upol>if right, even if.
+
+870
+00:58:57.200 --> 00:59:01.759
+<v Upol>The participants are saying no to the system, and that's
+
+871
+00:59:01.760 --> 00:59:06.379
+<v Upol>the crucial part. I think it changes how we formulate trust
+
+872
+00:59:06.380 --> 00:59:11.419
+<v Upol>because a lot of the work around trust that we see is around user acceptance.
+
+873
+00:59:11.420 --> 00:59:15.409
+<v Upol>I want my user to like the I want my user to accept me.
+
+874
+00:59:15.410 --> 00:59:20.269
+<v Upol>But I think what we are seeing is it's not about just mindlessly fostering
+
+875
+00:59:20.270 --> 00:59:25.489
+<v Upol>trust. It's about mindfully calibrating trust.
+
+876
+00:59:25.490 --> 00:59:29.570
+<v Upol>You don't want people to over trust your system because then there are liability issues.
+
+877
+00:59:30.780 --> 00:59:35.729
+<v Andrey>Yeah, exactly. And, yeah, so in terms of this process,
+
+878
+00:59:35.730 --> 00:59:40.439
+<v Andrey>you started these four workshops you, I think, carried out this idea
+
+879
+00:59:40.440 --> 00:59:43.290
+<v Andrey>of the four W's what who why when.
+
+880
+00:59:44.470 --> 00:59:49.019
+<v Andrey>And if I understand correctly after the workshops, you then had sort
+
+881
+00:59:49.020 --> 00:59:52.769
+<v Andrey>of a more controlled study where 29 participants.
+
+882
+00:59:52.770 --> 00:59:53.879
+<v Andrey>Is that right?
+
+883
+00:59:53.880 --> 00:59:57.839
+<v Upol>Yeah, yeah. So then then we really did this once we built the scenario, right?
+
+884
+00:59:57.840 --> 01:00:01.469
+<v Upol>Then you kind of when made people go through the scenario of the study.
+
+885
+01:00:01.470 --> 01:00:05.009
+<v Upol>So we would walk them through the scenario just the way I kind of described a few minutes
+
+886
+01:00:05.010 --> 01:00:09.449
+<v Upol>ago. And we will start seeing that how they start thinking
+
+887
+01:00:09.450 --> 01:00:12.359
+<v Upol>through this and this is the beauty of scenario, these design, right?
+
+888
+01:00:12.360 --> 01:00:14.639
+<v Upol>You can think of this as a probe.
+
+889
+01:00:14.640 --> 01:00:19.709
+<v Upol>So you are probing for reactions about an air power system
+
+890
+01:00:19.710 --> 01:00:24.539
+<v Upol>without really needing to invest the severe infrastructure that is needed to make a
+
+891
+01:00:24.540 --> 01:00:26.579
+<v Upol>like a full fledged AI system.
+
+892
+01:00:26.580 --> 01:00:31.169
+<v Upol>But you're getting very good design elements out of this for
+
+893
+01:00:31.170 --> 01:00:36.209
+<v Upol>a lot less cost. It does not mean that you don't build a system, of course you do.
+
+894
+01:00:36.210 --> 01:00:40.679
+<v Upol>So, for instance, in the cybersecurity case, once we did very
+
+895
+01:00:40.680 --> 01:00:45.479
+<v Upol>similar studies with them, with scenarios, we went and we built out, this takes.
+
+896
+01:00:45.480 --> 01:00:50.099
+<v Upol>And guess what, right? Like two years into the project with them,
+
+897
+01:00:50.100 --> 01:00:54.959
+<v Upol>that company actually now lives in a socially transparent world
+
+898
+01:00:54.960 --> 01:00:59.879
+<v Upol>where all their decisions are actually automatically situated with prior
+
+899
+01:00:59.880 --> 01:01:04.469
+<v Upol>history. And they are actually you able to use the four
+
+900
+01:01:04.470 --> 01:01:08.969
+<v Upol>W's as training to retrain their models so that the
+
+901
+01:01:08.970 --> 01:01:14.099
+<v Upol>decision is not only just algorithmically situated but also socially situated, right?
+
+902
+01:01:14.100 --> 01:01:18.749
+<v Andrey>So it becomes of this sort of feature space to model is informed by
+
+903
+01:01:18.750 --> 01:01:19.829
+<v Andrey>it seems.
+
+904
+01:01:19.830 --> 01:01:22.059
+<v Upol>Absolutely. And then think about it that way, right?
+
+905
+01:01:22.060 --> 01:01:25.800
+<v Upol>Like you are also getting a corpus without actually building a corpus.
+
+906
+01:01:26.970 --> 01:01:29.189
+<v Upol>Right. Because over time, what is going to happen?
+
+907
+01:01:29.190 --> 01:01:33.629
+<v Upol>These four W's are going to get enough density depending on who knows, right where they
+
+908
+01:01:33.630 --> 01:01:37.109
+<v Upol>become large enough that you can feed back into the model.
+
+909
+01:01:37.110 --> 01:01:41.549
+<v Upol>But the cool part is from day one, they're giving value to
+
+910
+01:01:41.550 --> 01:01:43.559
+<v Upol>the user. Right?
+
+911
+01:01:43.560 --> 01:01:48.329
+<v Upol>So they're not like being a grunt work of a data set building
+
+912
+01:01:48.330 --> 01:01:52.679
+<v Upol>task. That is the one thing that a lot of my cybersecurity analyst stakeholders would
+
+913
+01:01:52.680 --> 01:01:55.769
+<v Upol>counter that like, Hey, this is actually useful.
+
+914
+01:01:55.770 --> 01:02:00.149
+<v Upol>I like doing this because it doesn't make me feel like I'm building a stupid dataset that
+
+915
+01:02:00.150 --> 01:02:05.069
+<v Upol>I might not ever see. So they're actually building a corpus while
+
+916
+01:02:05.070 --> 01:02:09.029
+<v Upol>getting value from it, which is very hard to achieve in any kind of dataset building
+
+917
+01:02:09.030 --> 01:02:09.989
+<v Upol>tasks.
+
+918
+01:02:09.990 --> 01:02:12.329
+<v Andrey>Mm hmm. Yeah, exactly.
+
+919
+01:02:12.330 --> 01:02:17.069
+<v Andrey>And it's interesting to hear that they are more into it.
+
+920
+01:02:17.070 --> 01:02:21.539
+<v Andrey>And I think it's also funny that, you know, having done a study in the paper, you are
+
+921
+01:02:21.540 --> 01:02:26.429
+<v Andrey>able to not just give you on tape, but actually quotes
+
+922
+01:02:26.430 --> 01:02:30.899
+<v Andrey>the study participants and really, you know, showing their
+
+923
+01:02:30.900 --> 01:02:35.399
+<v Andrey>words very concretely how you came
+
+924
+01:02:35.400 --> 01:02:40.379
+<v Andrey>to your conclusion. So for instance, one quote that I think is really relevant is
+
+925
+01:02:40.380 --> 01:02:44.849
+<v Andrey>I hate how it just gives me a confidence level in gibberish to engineers will understand
+
+926
+01:02:44.850 --> 01:02:47.129
+<v Andrey>for zero context, right?
+
+927
+01:02:47.130 --> 01:02:52.149
+<v Andrey>It's a very human reaction that really tells you, Well, you know,
+
+928
+01:02:52.150 --> 01:02:53.939
+<v Andrey>this person, what's the context, right?
+
+929
+01:02:55.230 --> 01:02:59.759
+<v Andrey>So then, you know, we've talked through somebody resembles your study,
+
+930
+01:02:59.760 --> 01:03:03.059
+<v Andrey>and now I think we can dove in a little more.
+
+931
+01:03:03.060 --> 01:03:05.729
+<v Andrey>So we've talked about social concerns.
+
+932
+01:03:05.730 --> 01:03:10.559
+<v Andrey>And I think in the paper, you also break down a little bit what exactly
+
+933
+01:03:10.560 --> 01:03:14.229
+<v Andrey>is made visible, what you want to make visible.
+
+934
+01:03:14.230 --> 01:03:18.179
+<v Andrey>So the decision making context and the organizational context.
+
+935
+01:03:18.180 --> 01:03:23.699
+<v Andrey>So yeah, what is involved in these things that people really need to understand?
+
+936
+01:03:23.700 --> 01:03:26.459
+<v Upol>Yeah. So, you know, through the four W's.
+
+937
+01:03:26.460 --> 01:03:30.899
+<v Upol>So these are the kind of like that you can think of them, the vehicles that carry this
+
+938
+01:03:30.900 --> 01:03:35.489
+<v Upol>context, right? Mm hmm. So the four is the first thing,
+
+939
+01:03:35.490 --> 01:03:40.079
+<v Upol>and I think we kind of shared a framework that sees how it makes
+
+940
+01:03:40.080 --> 01:03:44.759
+<v Upol>context visible at three levels, which do the technical, the decision
+
+941
+01:03:44.760 --> 01:03:47.669
+<v Upol>making and the organizational right.
+
+942
+01:03:47.670 --> 01:03:52.379
+<v Upol>So but with the umbrella of all
+
+943
+01:03:52.380 --> 01:03:56.939
+<v Upol>three is the first to use what we call crew knowledge, right?
+
+944
+01:03:56.940 --> 01:04:01.949
+<v Upol>So crew knowledge is really an important part of these informal
+
+945
+01:04:01.950 --> 01:04:04.409
+<v Upol>knowledge that is acquired through hands on experience.
+
+946
+01:04:04.410 --> 01:04:09.059
+<v Upol>It's part, and it's tacit of every job that anyone has ever done.
+
+947
+01:04:09.060 --> 01:04:13.529
+<v Upol>Right? And it's often situated locally in a in a tight knit
+
+948
+01:04:13.530 --> 01:04:17.609
+<v Upol>community of practice, sort of like an aggregated set of Milhouse.
+
+949
+01:04:17.610 --> 01:04:22.139
+<v Upol>Right? So the Y right, the Y is actually
+
+950
+01:04:22.140 --> 01:04:24.899
+<v Upol>giving insight into that knowledge.
+
+951
+01:04:24.900 --> 01:04:28.769
+<v Upol>These are the variables that would be important for decision making, but sometimes are
+
+952
+01:04:28.770 --> 01:04:32.119
+<v Upol>not captured in the eyes kind of feature space.
+
+953
+01:04:32.120 --> 01:04:36.960
+<v Upol>Right? The other part is like social transparency can support analogical reasoning
+
+954
+01:04:37.980 --> 01:04:41.649
+<v Upol>in terms of like, OK, if someone has made the decision in the past, like you remember,
+
+955
+01:04:41.650 --> 01:04:45.599
+<v Upol>just I just gave a discount for the COVID case.
+
+956
+01:04:45.600 --> 01:04:49.799
+<v Upol>So that means I too can give the discount on the Kovic case.
+
+957
+01:04:49.800 --> 01:04:52.949
+<v Upol>Right? So it's aiming.
+
+958
+01:04:52.950 --> 01:04:57.569
+<v Upol>So at the at the technical level, it helps you calibrate the trust on the air
+
+959
+01:04:57.570 --> 01:05:00.179
+<v Upol>right and the decision making level.
+
+960
+01:05:00.180 --> 01:05:05.099
+<v Upol>It can foster a sense of confidence and a decision making resilience
+
+961
+01:05:05.100 --> 01:05:07.709
+<v Upol>that you know. How good are you? Can you trust AI?
+
+962
+01:05:07.710 --> 01:05:10.859
+<v Upol>Can you not trust and self confidence, right?
+
+963
+01:05:10.860 --> 01:05:15.569
+<v Upol>Yes, these difference between like, do I trust the AI versus do I trust myself
+
+964
+01:05:15.570 --> 01:05:20.219
+<v Upol>to act on that? And I think those two are slightly different constructs and
+
+965
+01:05:20.220 --> 01:05:22.679
+<v Upol>organizationally leases.
+
+966
+01:05:22.680 --> 01:05:27.509
+<v Upol>So for them to use is capturing these tacit knowledge and the meta knowledge
+
+967
+01:05:27.510 --> 01:05:32.129
+<v Upol>of how an organization will work. So you get an understanding of norms and values,
+
+968
+01:05:32.130 --> 01:05:36.929
+<v Upol>right? It kind of encodes a level of institutional memory,
+
+969
+01:05:36.930 --> 01:05:41.129
+<v Upol>and it promotes accountability because you can audit it, right?
+
+970
+01:05:41.130 --> 01:05:45.420
+<v Upol>If you know who did what, when and why you can go back and audit things.
+
+971
+01:05:46.470 --> 01:05:50.909
+<v Upol>So those are some of the things that we got out of this that are helpful when it
+
+972
+01:05:50.910 --> 01:05:53.969
+<v Upol>comes to making the AI powered decision making.
+
+973
+01:05:53.970 --> 01:05:58.739
+<v Andrey>Yeah, it's quite interesting this notion of decision making and organizational context.
+
+974
+01:05:58.740 --> 01:06:03.839
+<v Andrey>I think you define decision as sort of, you know, localized
+
+975
+01:06:03.840 --> 01:06:08.489
+<v Andrey>to a decision. So like, you know, you choose a price quarter, you you think about similar
+
+976
+01:06:08.490 --> 01:06:13.319
+<v Andrey>price quotas. Organization context is something that's easier to forget,
+
+977
+01:06:13.320 --> 01:06:17.459
+<v Andrey>but it's sort of, you know, what do we stand for?
+
+978
+01:06:17.460 --> 01:06:20.049
+<v Andrey>You know, how aggressive are we?
+
+979
+01:06:20.050 --> 01:06:25.259
+<v Andrey>You know, these sorts of things that are or in general and
+
+980
+01:06:25.260 --> 01:06:30.509
+<v Andrey>yeah, pretty interesting to. I think and I guess you came to understanding
+
+981
+01:06:30.510 --> 01:06:35.189
+<v Andrey>this sort of split by just seeing what people used or
+
+982
+01:06:35.190 --> 01:06:37.739
+<v Andrey>included in their four W's.
+
+983
+01:06:37.740 --> 01:06:40.349
+<v Upol>Yes, I think this came back from those workshops.
+
+984
+01:06:40.350 --> 01:06:43.829
+<v Upol>I think where we kind of understand like, OK, because, you know, we were thinking, maybe
+
+985
+01:06:43.830 --> 01:06:48.659
+<v Upol>there is an h like how maybe there is another W like where.
+
+986
+01:06:48.660 --> 01:06:53.129
+<v Upol>So we were trying to understand what would be the minimum
+
+987
+01:06:53.130 --> 01:06:57.389
+<v Upol>viable product, so to speak about in the in the social transparency, because we didn't
+
+988
+01:06:57.390 --> 01:06:58.769
+<v Upol>also want to overwhelm people.
+
+989
+01:06:59.820 --> 01:07:04.289
+<v Upol>So the way we kind of understood like what they were doing is actually through
+
+990
+01:07:04.290 --> 01:07:07.339
+<v Upol>the case studies that we have done in addition to this study.
+
+991
+01:07:07.340 --> 01:07:11.429
+<v Upol>Right. So we were trying. We were inspired by that aspect.
+
+992
+01:07:11.430 --> 01:07:16.289
+<v Upol>And that's why, like, you know, in the in table three, we kind of talk about, you know
+
+993
+01:07:16.290 --> 01:07:20.759
+<v Upol>what? What was it? So it's an action taken on the API, the decision
+
+994
+01:07:20.760 --> 01:07:25.679
+<v Upol>outcome. Why is like the comments with the rationale that justifies
+
+995
+01:07:25.680 --> 01:07:29.309
+<v Upol>the decision because of what and why is always linked?
+
+996
+01:07:29.310 --> 01:07:34.649
+<v Upol>And then who the name the organizational role, because sometimes seniority
+
+997
+01:07:34.650 --> 01:07:38.039
+<v Upol>starts playing a role like it was a director.
+
+998
+01:07:38.040 --> 01:07:42.659
+<v Upol>You kind of take their their view a little more than others.
+
+999
+01:07:42.660 --> 01:07:44.939
+<v Upol>And then when is the time of decision?
+
+1000
+01:07:44.940 --> 01:07:49.319
+<v Upol>And that's important because sometimes something some decisions are not relevant, right?
+
+1001
+01:07:49.320 --> 01:07:53.789
+<v Upol>So think about like, you know, pre-COVID, decisions do not become very relevant during
+
+1002
+01:07:53.790 --> 01:07:58.229
+<v Upol>COVID. So those are some of the things that we found, not just by
+
+1003
+01:07:58.230 --> 01:08:02.399
+<v Upol>our workshops, but also analyzing the data, the qualitative data through the interviews
+
+1004
+01:08:02.400 --> 01:08:03.929
+<v Upol>and the walk throughs that we had.
+
+1005
+01:08:05.280 --> 01:08:10.529
+<v Andrey>Yeah. And then you found, you know, the what is really important, the why is important,
+
+1006
+01:08:10.530 --> 01:08:13.059
+<v Andrey>the when, you know, sometimes, but you know.
+
+1007
+01:08:13.060 --> 01:08:17.608
+<v Andrey>Yeah. And then also, I think probably informed the UI, sort of
+
+1008
+01:08:17.609 --> 01:08:19.559
+<v Andrey>how you present things.
+
+1009
+01:08:19.560 --> 01:08:21.629
+<v Upol>We actually asked our participants at the end of it.
+
+1010
+01:08:21.630 --> 01:08:23.969
+<v Upol>I'm like, Can you rank it and tell me why?
+
+1011
+01:08:23.970 --> 01:08:28.438
+<v Upol>Right? So we would make them rank the them like, tell me what you cannot live
+
+1012
+01:08:28.439 --> 01:08:32.068
+<v Upol>without and everyone saying, I can't live without the what.
+
+1013
+01:08:32.069 --> 01:08:34.259
+<v Upol>And then I said, OK, imagine that I can give you one more.
+
+1014
+01:08:34.260 --> 01:08:37.108
+<v Upol>What would that be like? Oh, I need another wide.
+
+1015
+01:08:37.109 --> 01:08:39.398
+<v Upol>And then I said, Now imagine I give you one more.
+
+1016
+01:08:39.399 --> 01:08:43.829
+<v Upol>That's I need to know the whole. So that's how we kind of made them do this ranking task
+
+1017
+01:08:43.830 --> 01:08:48.509
+<v Upol>and then get a sense of importance, because sometimes many companies might not
+
+1018
+01:08:48.510 --> 01:08:53.009
+<v Upol>have all before that. There might be privacy concerns that prevent the
+
+1019
+01:08:53.010 --> 01:08:55.409
+<v Upol>HU from being shot. Right.
+
+1020
+01:08:55.410 --> 01:08:59.489
+<v Upol>Because you can also see, like, you know, biases creep up, like if I show the profile
+
+1021
+01:08:59.490 --> 01:09:03.929
+<v Upol>picture and you know, if you can guess the person's race or gender from the profile
+
+1022
+01:09:03.930 --> 01:09:08.459
+<v Upol>picture, it can create certain biased viewpoints
+
+1023
+01:09:08.460 --> 01:09:13.019
+<v Upol>or even the location, right? Because certain companies are multinational and it could
+
+1024
+01:09:13.020 --> 01:09:17.938
+<v Upol>be that, you know, certain locations are not often looked positively enough.
+
+1025
+01:09:17.939 --> 01:09:21.898
+<v Upol>And that's my bias, the receiver's perception.
+
+1026
+01:09:21.899 --> 01:09:22.899
+<v Upol>Mm hmm.
+
+1027
+01:09:23.490 --> 01:09:27.569
+<v Andrey>Yeah, exactly. And I think again, it's interesting here,
+
+1028
+01:09:28.620 --> 01:09:32.639
+<v Andrey>just reading the paper, which I think is, is, you know, I would recommend it.
+
+1029
+01:09:32.640 --> 01:09:34.739
+<v Andrey>I think it's quite approachable.
+
+1030
+01:09:34.740 --> 01:09:39.209
+<v Andrey>Is again, you have these quotes from the study participants
+
+1031
+01:09:39.210 --> 01:09:41.278
+<v Andrey>that make it very concrete.
+
+1032
+01:09:41.279 --> 01:09:46.169
+<v Andrey>One of them is the outcome should be a tldr the why is
+
+1033
+01:09:46.170 --> 01:09:50.249
+<v Andrey>there if I'm interested, then there's also the issue.
+
+1034
+01:09:50.250 --> 01:09:54.329
+<v Andrey>Someone said if I knew for to reach out to, I could find out the rest of the story and so
+
+1035
+01:09:54.330 --> 01:09:59.729
+<v Andrey>on. So again, it's it's really giving you a sense of how
+
+1036
+01:09:59.730 --> 01:10:05.579
+<v Andrey>your study and interaction with people led you to your conclusions,
+
+1037
+01:10:05.580 --> 01:10:07.470
+<v Andrey>which I really enjoyed in reading the paper.
+
+1038
+01:10:08.960 --> 01:10:13.400
+<v Upol>No, you know, thank you so much for the kind words we put a lot of love into this paper.
+
+1039
+01:10:14.440 --> 01:10:18.939
+<v Andrey>Yeah. And, yeah, you know, that's what you need to
+
+1040
+01:10:18.940 --> 01:10:22.149
+<v Andrey>make a paper really enjoyable, so your work pay off.
+
+1041
+01:10:23.420 --> 01:10:28.119
+<v Andrey>Now I think we can touch on a lot of it and it went through, I think
+
+1042
+01:10:28.120 --> 01:10:32.589
+<v Andrey>hopefully the most this stuff in terms of the study elements and the four W's
+
+1043
+01:10:32.590 --> 01:10:37.419
+<v Andrey>and make clear a social transparency is now on to a couple
+
+1044
+01:10:37.420 --> 01:10:40.810
+<v Andrey>final things. So we've
+
+1045
+01:10:41.890 --> 01:10:46.359
+<v Andrey>said, you know, it's good to have this on top of
+
+1046
+01:10:46.360 --> 01:10:49.569
+<v Andrey>what is already there. I'll go to make sure it's fancy.
+
+1047
+01:10:49.570 --> 01:10:54.429
+<v Andrey>So you need to add the social transparency and one question there as well
+
+1048
+01:10:54.430 --> 01:10:59.829
+<v Andrey>is it easy or is it a very challenge is in place that would make it harder
+
+1049
+01:10:59.830 --> 01:11:00.969
+<v Andrey>to do that?
+
+1050
+01:11:00.970 --> 01:11:05.019
+<v Upol>Yeah, that's a that's a good point. I think, you know, as as with everything, there has
+
+1051
+01:11:05.020 --> 01:11:08.739
+<v Upol>to be the infrastructure that is supported, right?
+
+1052
+01:11:09.940 --> 01:11:12.549
+<v Upol>And there are challenges like privacy.
+
+1053
+01:11:12.550 --> 01:11:17.079
+<v Upol>There are challenges like biases or information overload, as well as
+
+1054
+01:11:17.080 --> 01:11:22.359
+<v Upol>incentives like if you want to engage in a socially transparent system
+
+1055
+01:11:22.360 --> 01:11:26.859
+<v Upol>that has to be incentive for people to engage with it like, you know, give
+
+1056
+01:11:26.860 --> 01:11:29.979
+<v Upol>those four W's as they're working, that is a burden that is added, right?
+
+1057
+01:11:29.980 --> 01:11:31.239
+<v Upol>Like no fees, lunches.
+
+1058
+01:11:32.290 --> 01:11:36.849
+<v Upol>And so that means we have to be very mindful of that.
+
+1059
+01:11:36.850 --> 01:11:39.939
+<v Upol>And you know, we can, you know, with the Ford family, you could also kind of promote
+
+1060
+01:11:39.940 --> 01:11:44.259
+<v Upol>groupthink, right? Imagine in a company culture where you're not allowed to go against
+
+1061
+01:11:44.260 --> 01:11:47.229
+<v Upol>your boss and you see a comment from your boss previously.
+
+1062
+01:11:47.230 --> 01:11:49.919
+<v Upol>So so we have to be careful.
+
+1063
+01:11:49.920 --> 01:11:51.189
+<v Upol>You know, it's not a golden bullet.
+
+1064
+01:11:52.240 --> 01:11:56.949
+<v Upol>So we have to be very careful when we operationalize the social transparency
+
+1065
+01:11:56.950 --> 01:12:01.419
+<v Upol>that we are trying to be very mindful of some of these challenges, like,
+
+1066
+01:12:01.420 --> 01:12:05.289
+<v Upol>you know, do we really want to see all the four W's at every single time?
+
+1067
+01:12:05.290 --> 01:12:07.509
+<v Upol>No, there are ways to summarize it.
+
+1068
+01:12:07.510 --> 01:12:11.829
+<v Upol>And we have done that in my project with the cyber security people, we have been able to
+
+1069
+01:12:11.830 --> 01:12:16.029
+<v Upol>figure out how to summarize these aspects at a level of detail that is actionable.
+
+1070
+01:12:17.810 --> 01:12:22.359
+<v Andrey>Yeah. And so speaking of cyber security, people say,
+
+1071
+01:12:22.360 --> 01:12:27.039
+<v Andrey>take it outside the study, I was interacting with
+
+1072
+01:12:27.040 --> 01:12:31.789
+<v Andrey>these participants and, you know, figuring out
+
+1073
+01:12:31.790 --> 01:12:36.219
+<v Andrey>the of context. You also took this for context to
+
+1074
+01:12:36.220 --> 01:12:38.979
+<v Andrey>an actual organization and then tried it out.
+
+1075
+01:12:38.980 --> 01:12:43.449
+<v Upol>Is that right? Yeah. So like if you remember just from a timeline perspective,
+
+1076
+01:12:43.450 --> 01:12:47.949
+<v Upol>right? So by the time I think we wrote the paper we already
+
+1077
+01:12:47.950 --> 01:12:50.019
+<v Upol>had. This is obviously the study.
+
+1078
+01:12:50.020 --> 01:12:54.549
+<v Upol>So there was an empirical study that was done. Separate from this in parallel was
+
+1079
+01:12:54.550 --> 01:12:58.329
+<v Upol>the cyber security project that I was running for a long, long time.
+
+1080
+01:12:58.330 --> 01:13:03.639
+<v Upol>And what I had the, I guess, the luxury of knowing the future to some extent is
+
+1081
+01:13:03.640 --> 01:13:08.169
+<v Upol>we were able to incorporate a lot of these four ws into their system and they
+
+1082
+01:13:08.170 --> 01:13:12.219
+<v Upol>lived in a socially transparent world when we wrote this paper.
+
+1083
+01:13:12.220 --> 01:13:16.899
+<v Upol>So that's why we were able to talk a lot about these transfer cases challenges
+
+1084
+01:13:16.900 --> 01:13:20.709
+<v Upol>because those are some of the challenges we faced in the real world when we were trying
+
+1085
+01:13:20.710 --> 01:13:24.969
+<v Upol>to implement this in an enterprise setting that is multinational.
+
+1086
+01:13:24.970 --> 01:13:29.589
+<v Andrey>I see. So when you presented this and sort of said, we should do this,
+
+1087
+01:13:30.880 --> 01:13:34.539
+<v Andrey>you know how receptive our people today sort of get it right away or
+
+1088
+01:13:34.540 --> 01:13:39.309
+<v Upol>initially there was a little bit of like hesitation, I think, because someone
+
+1089
+01:13:39.310 --> 01:13:43.869
+<v Upol>said, like, how is this explainability, right?
+
+1090
+01:13:43.870 --> 01:13:48.279
+<v Upol>Because there is this and there is a very powerful like AI developer like this is not
+
+1091
+01:13:48.280 --> 01:13:51.449
+<v Upol>explainability. And I think that's kind of like the idea of the paper kind of came to
+
+1092
+01:13:52.540 --> 01:13:57.549
+<v Upol>light. Our idea of explainability is so narrow that
+
+1093
+01:13:57.550 --> 01:14:02.409
+<v Upol>we have a hard time kind of even envisioning more than that.
+
+1094
+01:14:02.410 --> 01:14:06.759
+<v Upol>So what we actually did to kind of address those kind of concerns is, you know, as we see
+
+1095
+01:14:06.760 --> 01:14:11.260
+<v Upol>as you saw also on the paper in this empirical study that we had concrete
+
+1096
+01:14:12.910 --> 01:14:17.349
+<v Upol>like directly from the stakeholder information about how
+
+1097
+01:14:17.350 --> 01:14:21.939
+<v Upol>these additional context help them understand the system, right?
+
+1098
+01:14:21.940 --> 01:14:25.929
+<v Upol>And then if we go back to our initial definition of explainability rights, things that
+
+1099
+01:14:25.930 --> 01:14:28.359
+<v Upol>helped me understand the AI systems, right?
+
+1100
+01:14:28.360 --> 01:14:30.969
+<v Upol>And in this case, the AI systems are not algorithm.
+
+1101
+01:14:30.970 --> 01:14:32.919
+<v Upol>These are human AI assemblages.
+
+1102
+01:14:32.920 --> 01:14:36.549
+<v Upol>Right? So and they're socio technically situated.
+
+1103
+01:14:36.550 --> 01:14:41.319
+<v Upol>So there you go. So initially, there was a lot of pushback,
+
+1104
+01:14:41.320 --> 01:14:43.989
+<v Upol>but what the proof is often in the pudding.
+
+1105
+01:14:43.990 --> 01:14:48.609
+<v Upol>So when we added social transparency, the engagement went from like two
+
+1106
+01:14:48.610 --> 01:14:50.639
+<v Upol>percent to ninety six percent.
+
+1107
+01:14:50.640 --> 01:14:53.549
+<v Upol>Right? That you can't ignore.
+
+1108
+01:14:53.550 --> 01:14:58.599
+<v Upol>Right. And so so those are some of the things that helped a lot of the stakeholders
+
+1109
+01:14:58.600 --> 01:15:02.589
+<v Upol>have more buy in and get a sense of, OK, now this is important.
+
+1110
+01:15:02.590 --> 01:15:07.719
+<v Upol>This might not look algorithmic, but it has everything to do with the algorithm,
+
+1111
+01:15:07.720 --> 01:15:08.720
+<v Upol>right?
+
+1112
+01:15:09.130 --> 01:15:12.429
+<v Andrey>Yeah, I guess it harkens back to the title of a work, right?
+
+1113
+01:15:12.430 --> 01:15:17.319
+<v Andrey>Expanding explainability, you know, as person said, how is this
+
+1114
+01:15:17.320 --> 01:15:21.189
+<v Andrey>explainbaility while you've pointed out, then you sort of make the argument that this
+
+1115
+01:15:21.190 --> 01:15:25.809
+<v Andrey>should be part of expandability, and by adding it,
+
+1116
+01:15:25.810 --> 01:15:29.829
+<v Andrey>you get sort of a more holistic, full understanding.
+
+1117
+01:15:29.830 --> 01:15:32.199
+<v Andrey>Is that kind of a fair characterization?
+
+1118
+01:15:32.200 --> 01:15:37.239
+<v Upol>Yeah, yeah. And I think, you know, sometimes the simplicity is kind of elusive
+
+1119
+01:15:37.240 --> 01:15:42.039
+<v Upol>and deceptive. But, you know, we also have to understand that sometimes
+
+1120
+01:15:42.040 --> 01:15:44.739
+<v Upol>very powerful ideas and also very simple ideals.
+
+1121
+01:15:44.740 --> 01:15:49.299
+<v Upol>And I think within AI, we have to kind of go back to those roots at some point, like
+
+1122
+01:15:49.300 --> 01:15:51.579
+<v Upol>not everything that is complex is good.
+
+1123
+01:15:51.580 --> 01:15:54.639
+<v Upol>Neither is not everything that is simple is bad.
+
+1124
+01:15:54.640 --> 01:15:57.219
+<v Upol>You can have very good ideas that are very simple.
+
+1125
+01:15:57.220 --> 01:15:59.919
+<v Andrey>Yeah, exactly. Simple ideas can be very powerful.
+
+1126
+01:15:59.920 --> 01:16:04.809
+<v Andrey>And I guess one of the key insights here is social transparency as a concept
+
+1127
+01:16:04.810 --> 01:16:08.289
+<v Andrey>and as something that needs to be part of expandability.
+
+1128
+01:16:08.290 --> 01:16:12.759
+<v Andrey>So just to go back and situate within the XAI
+
+1129
+01:16:12.760 --> 01:16:17.259
+<v Andrey>research field, you know, I don't know
+
+1130
+01:16:17.260 --> 01:16:20.749
+<v Andrey>too much about the context of that field and what is going on there.
+
+1131
+01:16:20.750 --> 01:16:26.169
+<v Andrey>So what do you think could be hopefully, I guess, the impact and
+
+1132
+01:16:26.170 --> 01:16:30.039
+<v Andrey>what this could enable as far as future research?
+
+1133
+01:16:30.040 --> 01:16:34.839
+<v Upol>First of all, I think it makes this very nebulous topic of socio organizational
+
+1134
+01:16:34.840 --> 01:16:37.099
+<v Upol>context tractable, right?
+
+1135
+01:16:37.100 --> 01:16:41.679
+<v Upol>Like for concrete things to go for, and that's a good starting point.
+
+1136
+01:16:41.680 --> 01:16:44.709
+<v Upol>It gives people to grasp on to that and build on it.
+
+1137
+01:16:44.710 --> 01:16:49.269
+<v Upol>And I think that's what we actually invite people to do right is
+
+1138
+01:16:49.270 --> 01:16:52.659
+<v Upol>now that we have at least started the conversation.
+
+1139
+01:16:52.660 --> 01:16:57.279
+<v Upol>That explainability is beyond algorithmic transparency
+
+1140
+01:16:57.280 --> 01:17:01.809
+<v Upol>and given the community one way of capturing the socio
+
+1141
+01:17:01.810 --> 01:17:05.560
+<v Upol>organizational context, I think now it starts to seed
+
+1142
+01:17:06.880 --> 01:17:11.469
+<v Upol>more ideas. And I think there is some fascinating paper that I've seen after that
+
+1143
+01:17:11.470 --> 01:17:15.859
+<v Upol>around and ideas actually that talk.
+
+1144
+01:17:15.860 --> 01:17:21.229
+<v Upol>Using this notion of social transparency talked about end to end lifecycle perspectives
+
+1145
+01:17:21.230 --> 01:17:25.429
+<v Upol>within explainability, like who needs to know what, when and why, like sheep and ocher
+
+1146
+01:17:25.430 --> 01:17:28.669
+<v Upol>and Christine Wolfe and others have kind of written about it.
+
+1147
+01:17:28.670 --> 01:17:33.169
+<v Upol>So I didn't get it. It gives us bedrock for future work to
+
+1148
+01:17:33.170 --> 01:17:37.609
+<v Upol>kind of build on it, and I hope it does, and I'll work within
+
+1149
+01:17:37.610 --> 01:17:41.239
+<v Upol>explainability takes far beyond social transparency.
+
+1150
+01:17:41.240 --> 01:17:45.019
+<v Upol>There are other things that are outside the box that also need to be included.
+
+1151
+01:17:45.020 --> 01:17:49.189
+<v Upol>And how do we encode that? I hope people use this kind of scenario, these design
+
+1152
+01:17:49.190 --> 01:17:53.809
+<v Upol>techniques, and it is also not shy away from the fact that if something as simple, right,
+
+1153
+01:17:53.810 --> 01:17:58.130
+<v Upol>as long as powerful, that's still a valid and good contribution.
+
+1154
+01:17:59.140 --> 01:18:03.549
+<v Andrey>Yeah, I guess in a sense, that's how you want research to work, someone reads a paper and
+
+1155
+01:18:03.550 --> 01:18:08.199
+<v Andrey>it's like, Wow, this is cool, but what if he did this or this thing doesn't
+
+1156
+01:18:08.200 --> 01:18:10.539
+<v Andrey>work? You know, I have this idea.
+
+1157
+01:18:10.540 --> 01:18:12.639
+<v Andrey>So that makes a lot of sense.
+
+1158
+01:18:12.640 --> 01:18:17.169
+<v Andrey>And also to that notion of sort of the context and the field itself, we
+
+1159
+01:18:17.170 --> 01:18:21.699
+<v Andrey>talked about on a bit of a push back, it got at the industry
+
+1160
+01:18:21.700 --> 01:18:24.489
+<v Andrey>level within the research community.
+
+1161
+01:18:24.490 --> 01:18:28.869
+<v Andrey>You know, when you submitted it, when you got reviews, when you presented it, what was
+
+1162
+01:18:28.870 --> 01:18:31.149
+<v Andrey>the reception of your colleagues?
+
+1163
+01:18:32.230 --> 01:18:36.429
+<v Upol>I think it was surprising to us. We always thought when we wrote the paper that people
+
+1164
+01:18:36.430 --> 01:18:39.099
+<v Upol>either hate it or they will love it.
+
+1165
+01:18:39.100 --> 01:18:43.809
+<v Upol>I don't think anyone who's going to be neutral to it because it was making a very
+
+1166
+01:18:43.810 --> 01:18:48.309
+<v Upol>provocative argument. It was making the argument that explainability is not
+
+1167
+01:18:48.310 --> 01:18:50.289
+<v Upol>transgressive. It is more than that.
+
+1168
+01:18:50.290 --> 01:18:53.769
+<v Upol>And it's not just saying that it's like this one way of doing it.
+
+1169
+01:18:53.770 --> 01:18:58.719
+<v Upol>So and clearly it was well-received, and
+
+1170
+01:18:58.720 --> 01:19:01.270
+<v Upol>the presentation at Chi went very well.
+
+1171
+01:19:02.830 --> 01:19:07.089
+<v Upol>And, you know, we were very lucky to receive this paper, honorable mention on it as well.
+
+1172
+01:19:08.170 --> 01:19:13.009
+<v Upol>So I think overall, it went better than we expected it, to be honest.
+
+1173
+01:19:13.010 --> 01:19:18.099
+<v Andrey>Yeah, it's good to hear that given again, this was
+
+1174
+01:19:18.100 --> 01:19:20.210
+<v Andrey>it looks to be quite the effort.
+
+1175
+01:19:20.211 --> 01:19:22.269
+<v Andrey>CHI is pretty big, right?
+
+1176
+01:19:22.270 --> 01:19:24.969
+<v Upol>Yeah, it is the premier HCI conference.
+
+1177
+01:19:24.970 --> 01:19:29.319
+<v Upol>So like, not like nervous for now because Neurips at a different scale, but like in terms
+
+1178
+01:19:29.320 --> 01:19:33.879
+<v Upol>of like the premiere venue. Right CHI, is that for HCI, what
+
+1179
+01:19:33.880 --> 01:19:36.969
+<v Upol>NEURIPS is like for ML.no, I guess that's a different way of looking at it.
+
+1180
+01:19:36.970 --> 01:19:39.309
+<v Andrey>Well, so yeah, that's really cool.
+
+1181
+01:19:39.310 --> 01:19:44.499
+<v Andrey>And we'll have a link to that paper again and a description and our Substack.
+
+1182
+01:19:44.500 --> 01:19:49.569
+<v Andrey>So if you do want to get more into it, you can just click and read it.
+
+1183
+01:19:49.570 --> 01:19:54.879
+<v Andrey>And that's just to touch on a bit what has happened since.
+
+1184
+01:19:54.880 --> 01:19:58.659
+<v Andrey>In your research, you had actually a couple of weeks.
+
+1185
+01:19:58.660 --> 01:20:03.639
+<v Andrey>So first up, you have the WHO and explainable AI
+
+1186
+01:20:03.640 --> 01:20:07.179
+<v Andrey>how AI background shapes perceptions of AI explanations.
+
+1187
+01:20:07.180 --> 01:20:10.869
+<v Andrey>How does that relate to your prior work and endless work?
+
+1188
+01:20:10.870 --> 01:20:13.779
+<v Andrey>And sort of what what was what is it?
+
+1189
+01:20:13.780 --> 01:20:17.799
+<v Upol>Absolutely. So I mean, this is directly related to a human centered, explainable way.
+
+1190
+01:20:17.800 --> 01:20:22.299
+<v Upol>I kind of work in the sense that not all humans are
+
+1191
+01:20:22.300 --> 01:20:25.599
+<v Upol>the same when it comes to interacting with the AI system.
+
+1192
+01:20:25.600 --> 01:20:28.929
+<v Upol>I don't think anyone will challenge that observation.
+
+1193
+01:20:28.930 --> 01:20:33.969
+<v Upol>Right. But then the question becomes, OK, who are these people?
+
+1194
+01:20:33.970 --> 01:20:38.469
+<v Upol>How do their different views or characteristics impact how they interpret
+
+1195
+01:20:38.470 --> 01:20:42.919
+<v Upol>explanations? So in this paper, it's just something that we
+
+1196
+01:20:42.920 --> 01:20:46.509
+<v Upol>looked at like a very critical dimension, which is any AI background.
+
+1197
+01:20:46.510 --> 01:20:51.489
+<v Upol>Like if you think about consumers of AI technology versus creators of AI technology,
+
+1198
+01:20:51.490 --> 01:20:56.229
+<v Upol>oftentimes consumers don't have the level of AI background that the creators have,
+
+1199
+01:20:56.230 --> 01:20:57.219
+<v Upol>right?
+
+1200
+01:20:57.220 --> 01:21:01.539
+<v Upol>So given that this background is a consequential dimension, but also the fact that it
+
+1201
+01:21:01.540 --> 01:21:05.469
+<v Upol>might be absent in the users of systems that we build.
+
+1202
+01:21:05.470 --> 01:21:10.119
+<v Upol>How does that background actually impact the perceptions
+
+1203
+01:21:10.120 --> 01:21:14.619
+<v Upol>of these AI explanations, right? Because again, we're making the explanations also for
+
+1204
+01:21:14.620 --> 01:21:19.119
+<v Upol>the receiver explaining that and then they explain that so that this
+
+1205
+01:21:19.120 --> 01:21:23.649
+<v Upol>is the paper that is, I think, the first paper that kind of explores the AI
+
+1206
+01:21:23.650 --> 01:21:28.299
+<v Upol>background as there's a dimension to to see
+
+1207
+01:21:28.300 --> 01:21:32.469
+<v Upol>like, well, how does that impact like we see humans, humans, but who are these humans?
+
+1208
+01:21:32.470 --> 01:21:37.149
+<v Upol>Well, let's look at two two groups of humans like people with and people
+
+1209
+01:21:37.150 --> 01:21:41.679
+<v Upol>without. So this paper kind of presents a study based
+
+1210
+01:21:41.680 --> 01:21:46.269
+<v Upol>largely actually on the Frogger work now way back when to kind of
+
+1211
+01:21:46.270 --> 01:21:47.499
+<v Upol>get at these questions.
+
+1212
+01:21:48.640 --> 01:21:53.199
+<v Andrey>Yeah, it makes me think also, aside from like, you
+
+1213
+01:21:53.200 --> 01:21:58.069
+<v Andrey>know, I develop or not add it all up, or even just like programmer who were
+
+1214
+01:21:58.070 --> 01:22:00.559
+<v Andrey>and resources a person in sales.
+
+1215
+01:22:00.560 --> 01:22:05.319
+<v Andrey>You might interact with the AI system differently, so it seems
+
+1216
+01:22:05.320 --> 01:22:07.449
+<v Andrey>no good to take into account, for sure.
+
+1217
+01:22:07.450 --> 01:22:12.759
+<v Andrey>Yeah. And then I think also you had
+
+1218
+01:22:12.760 --> 01:22:17.679
+<v Andrey>this elevating explainability pitfalls beyond dark patterns
+
+1219
+01:22:17.680 --> 01:22:21.579
+<v Andrey>and explainable AI, which sounds a little bit exciting.
+
+1220
+01:22:22.590 --> 01:22:24.339
+<v Andrey>So, yeah, what's that about?
+
+1221
+01:22:24.340 --> 01:22:29.409
+<v Upol>So this paper is actually related to the WHO in my paper, because one of the findings
+
+1222
+01:22:29.410 --> 01:22:33.729
+<v Upol>in WHO and say that we got was we're both groups.
+
+1223
+01:22:33.730 --> 01:22:38.469
+<v Upol>The group with AI and NONYE backgrounds had exhibited
+
+1224
+01:22:38.470 --> 01:22:44.499
+<v Upol>unwarranted faith in numerical based explanations
+
+1225
+01:22:44.500 --> 01:22:46.779
+<v Upol>that had no
+
+1226
+01:22:49.180 --> 01:22:53.439
+<v Upol>meaning behind them, so to speak. But even if people did not understand what the numbers
+
+1227
+01:22:53.440 --> 01:22:57.219
+<v Upol>meant, there was a level of over trust in them.
+
+1228
+01:22:57.220 --> 01:23:01.449
+<v Upol>So based on. That observation, what is interesting is like we were not trying to trick
+
+1229
+01:23:01.450 --> 01:23:05.469
+<v Upol>anyone, right? Like that's the importance of this finding that in the study, we were not
+
+1230
+01:23:05.470 --> 01:23:09.399
+<v Upol>trying to trick anyone. We just use the numerical explanations as a baseline.
+
+1231
+01:23:09.400 --> 01:23:13.750
+<v Upol>Our main instrument was the textual explanations, the actual rationale.
+
+1232
+01:23:15.130 --> 01:23:19.809
+<v Upol>And while trying to examine that, we were like, Oh my God, why are people like so
+
+1233
+01:23:19.810 --> 01:23:23.349
+<v Upol>in love with these numbers, then that they don't understand?
+
+1234
+01:23:23.350 --> 01:23:27.879
+<v Upol>Because we have qualitative data where they tell us, I don't understand it now,
+
+1235
+01:23:27.880 --> 01:23:30.039
+<v Upol>but I can understand it later.
+
+1236
+01:23:30.040 --> 01:23:34.659
+<v Upol>And what is interesting is that people with AI background and those
+
+1237
+01:23:34.660 --> 01:23:39.909
+<v Upol>without. Have different results for over trusting
+
+1238
+01:23:39.910 --> 01:23:42.879
+<v Upol>the AI, right? So over trusting the numbers.
+
+1239
+01:23:42.880 --> 01:23:45.849
+<v Upol>Excuse me. Yeah. So we started asking the questions.
+
+1240
+01:23:45.850 --> 01:23:50.409
+<v Upol>All right. There are many times where harmful effects can
+
+1241
+01:23:50.410 --> 01:23:55.029
+<v Upol>happen, like over trust, even when best
+
+1242
+01:23:55.030 --> 01:23:57.969
+<v Upol>of intentions are there, like in our case.
+
+1243
+01:23:57.970 --> 01:24:02.439
+<v Upol>Right. A lot of harmful work and explainable AI is couched under
+
+1244
+01:24:02.440 --> 01:24:06.519
+<v Upol>this term called dark patterns, which are basically deceptive practices.
+
+1245
+01:24:06.520 --> 01:24:10.119
+<v Upol>It's easiest to explain it from the other side, like if you think about like, you know,
+
+1246
+01:24:10.120 --> 01:24:15.189
+<v Upol>in certain websites, they have all these like like transparent like ads.
+
+1247
+01:24:15.190 --> 01:24:19.239
+<v Upol>And when you're trying to click the play button like 10000 windows, open up, right?
+
+1248
+01:24:19.240 --> 01:24:21.639
+<v Upol>And you have to take them 10000 politicians to get it.
+
+1249
+01:24:21.640 --> 01:24:26.859
+<v Upol>So there's a dark side that kind of drives clicks by tricking the user,
+
+1250
+01:24:26.860 --> 01:24:31.119
+<v Upol>you know, not all harm patterns like harmful patterns are created equal.
+
+1251
+01:24:31.120 --> 01:24:35.859
+<v Upol>So what happens when harmful effects emerge,
+
+1252
+01:24:35.860 --> 01:24:38.769
+<v Upol>when there is no bad intention behind it?
+
+1253
+01:24:38.770 --> 01:24:43.659
+<v Upol>Right, right? So to answer that question, we wrote another kind of conceptual paper,
+
+1254
+01:24:43.660 --> 01:24:47.319
+<v Upol>and we call these things explainable the pitfalls.
+
+1255
+01:24:47.320 --> 01:24:51.939
+<v Upol>Right? So these pitfalls are certain things that you might not intend
+
+1256
+01:24:51.940 --> 01:24:56.589
+<v Upol>for bad things to happen, but like a pitfall in a real piece of like in the real world,
+
+1257
+01:24:56.590 --> 01:24:58.659
+<v Upol>you might inadvertently fall into it.
+
+1258
+01:24:58.660 --> 01:25:02.169
+<v Upol>Right? Because, you know, it's not like pitfalls have there to like trap people.
+
+1259
+01:25:02.170 --> 01:25:07.029
+<v Upol>Sometimes the pitfalls emerge in nature, in jungles and other places
+
+1260
+01:25:07.030 --> 01:25:10.939
+<v Upol>by the construction site, and that you might inadvertently fall into it.
+
+1261
+01:25:10.940 --> 01:25:15.819
+<v Upol>So this paper is kind of trying to articulate what are explainability pitfalls?
+
+1262
+01:25:15.820 --> 01:25:19.869
+<v Upol>How do you address them? What are some of the strategies to mitigate them?
+
+1263
+01:25:19.870 --> 01:25:24.939
+<v Upol>So this is more of another kind of a conceptual paper situated with a case study,
+
+1264
+01:25:24.940 --> 01:25:29.169
+<v Upol>and it recently got into the human centered AI workshop at in Europe.
+
+1265
+01:25:29.170 --> 01:25:32.509
+<v Upol>So this year, so we are looking forward to sharing it with the community as well.
+
+1266
+01:25:32.510 --> 01:25:36.389
+<v Andrey>Oh, it's exciting. Yeah, that's roughly in a moment, right?
+
+1267
+01:25:36.390 --> 01:25:39.529
+<v Andrey>Yeah, yeah. Yeah, that's that's interesting.
+
+1268
+01:25:39.530 --> 01:25:44.049
+<v Andrey>This concept of sheer is something you should avoid doing seems
+
+1269
+01:25:44.050 --> 01:25:48.489
+<v Andrey>like a good idea, almost publishing negative results,
+
+1270
+01:25:48.490 --> 01:25:50.229
+<v Andrey>which is which is fun.
+
+1271
+01:25:51.820 --> 01:25:56.290
+<v Andrey>Well, we went for a lot of your work and then almost traced
+
+1272
+01:25:57.310 --> 01:26:01.989
+<v Andrey>from the beginning to the present. But of course, it's also important again, to mention,
+
+1273
+01:26:01.990 --> 01:26:06.249
+<v Andrey>as you have done before, that this was, you know, a lot of this was done with many
+
+1274
+01:26:06.250 --> 01:26:11.079
+<v Andrey>collaborators and you built on a lot of prior research, obviously
+
+1275
+01:26:11.080 --> 01:26:16.030
+<v Andrey>in many fields. This is true of any research job because you were present,
+
+1276
+01:26:18.100 --> 01:26:21.159
+<v Andrey>maybe beyond your papers.
+
+1277
+01:26:21.160 --> 01:26:25.779
+<v Andrey>What kind of is the situation when it comes to
+
+1278
+01:26:25.780 --> 01:26:30.369
+<v Andrey>community working on XAI, Nick's family AI and also human
+
+1279
+01:26:30.370 --> 01:26:34.989
+<v Andrey>centered XAI, you know, is is is your being
+
+1280
+01:26:34.990 --> 01:26:37.359
+<v Andrey>human centered or socio technical?
+
+1281
+01:26:37.360 --> 01:26:42.189
+<v Andrey>Is that becoming more popular or are more people so aware
+
+1282
+01:26:42.190 --> 01:26:43.839
+<v Andrey>of it, that sort of thing?
+
+1283
+01:26:43.840 --> 01:26:48.009
+<v Upol>No, you're absolutely right. I think, you know, I stand in the shoulder of giants, right?
+
+1284
+01:26:48.010 --> 01:26:52.839
+<v Upol>There's no two ways about it without the fantastic people I work with.
+
+1285
+01:26:52.840 --> 01:26:57.579
+<v Upol>None of this work becomes reality and the communities,
+
+1286
+01:26:57.580 --> 01:27:00.189
+<v Upol>and it's something that I care deeply about.
+
+1287
+01:27:00.190 --> 01:27:03.189
+<v Upol>So we have been very lucky in this context.
+
+1288
+01:27:03.190 --> 01:27:07.929
+<v Upol>And by 2020 one, we were able to host the first
+
+1289
+01:27:07.930 --> 01:27:10.299
+<v Upol>human centered explainable AI workshop.
+
+1290
+01:27:10.300 --> 01:27:15.249
+<v Upol>It was actually one of the largest attended workshops and trials during
+
+1291
+01:27:15.250 --> 01:27:19.209
+<v Upol>more than 100 people came over 14 countries.
+
+1292
+01:27:20.470 --> 01:27:25.389
+<v Upol>So we had a stellar group of papers.
+
+1293
+01:27:25.390 --> 01:27:30.279
+<v Upol>We had a keynote from Tim Miller, an expert panel discussions.
+
+1294
+01:27:30.280 --> 01:27:32.769
+<v Upol>So I think that community is still going on.
+
+1295
+01:27:32.770 --> 01:27:36.309
+<v Upol>And actually, we did just propose to host the second workshop
+
+1296
+01:27:37.420 --> 01:27:41.409
+<v Upol>at Chi. And I think after this, we want to take it beyond.
+
+1297
+01:27:41.410 --> 01:27:45.849
+<v Upol>We want to take it down. Europe's who want to take it to triple AI, to try to
+
+1298
+01:27:45.850 --> 01:27:50.409
+<v Upol>see how more can we intersect with more
+
+1299
+01:27:50.410 --> 01:27:54.729
+<v Upol>other communities around HCI, like other relevant social groups, right?
+
+1300
+01:27:54.730 --> 01:27:57.559
+<v Upol>The computer vision people and this people.
+
+1301
+01:27:57.560 --> 01:28:01.999
+<v Upol>So. These are some things that we deeply care about, and that is something that
+
+1302
+01:28:02.000 --> 01:28:06.469
+<v Upol>I would that I'm kind of like looking
+
+1303
+01:28:06.470 --> 01:28:07.470
+<v Upol>forward.
+
+1304
+01:28:07.960 --> 01:28:09.939
+<v Andrey>Yeah, definitely so.
+
+1305
+01:28:09.940 --> 01:28:14.379
+<v Andrey>And just to get it a bit more into that, you know, what's next for
+
+1306
+01:28:14.380 --> 01:28:19.059
+<v Andrey>you both in terms of this community aspect of, you know, having various events
+
+1307
+01:28:19.060 --> 01:28:23.619
+<v Andrey>to let people know about to see you and also in terms of,
+
+1308
+01:28:23.620 --> 01:28:25.809
+<v Andrey>I guess, where your research is headed.
+
+1309
+01:28:25.810 --> 01:28:30.039
+<v Upol>Yeah, I think for me, I as I share, if there's a project that I'm doing with radiation
+
+1310
+01:28:30.040 --> 01:28:34.179
+<v Upol>oncology, it's actually exploring social transparency in their world and this has been
+
+1311
+01:28:34.180 --> 01:28:36.789
+<v Upol>actually a value long term engagement.
+
+1312
+01:28:36.790 --> 01:28:39.939
+<v Upol>I've been working with them for more than two years now.
+
+1313
+01:28:39.940 --> 01:28:44.619
+<v Upol>I've also kind of been working with the Data and Society Institute on
+
+1314
+01:28:44.620 --> 01:28:47.739
+<v Upol>Algorithmic Justice Issues around the Global South.
+
+1315
+01:28:47.740 --> 01:28:52.599
+<v Upol>So you know what happens when we all talk a lot about algorithmic
+
+1316
+01:28:52.600 --> 01:28:56.229
+<v Upol>deployment right before deployment?
+
+1317
+01:28:56.230 --> 01:29:00.919
+<v Upol>Dataset creation? But what happens when algorithms get taken out
+
+1318
+01:29:00.920 --> 01:29:04.569
+<v Upol>and what happens, then what happens when they're no longer used?
+
+1319
+01:29:04.570 --> 01:29:09.069
+<v Upol>So there is a project that I'm running that has explainability component, as well
+
+1320
+01:29:09.070 --> 01:29:14.049
+<v Upol>as algorithmic justice component around being creating the algorithmic
+
+1321
+01:29:14.050 --> 01:29:18.669
+<v Upol>trading of the DC exams, which are like
+
+1322
+01:29:18.670 --> 01:29:23.199
+<v Upol>basically international exams administered by Ofqual and UK
+
+1323
+01:29:23.200 --> 01:29:27.519
+<v Upol>governing boards. But these exams are actually administered in over one hundred and sixty
+
+1324
+01:29:27.520 --> 01:29:32.049
+<v Upol>countries. So you might recall that in August of twenty twenty, there
+
+1325
+01:29:32.050 --> 01:29:36.879
+<v Upol>were protests around an algorithm grading a lot of students know.
+
+1326
+01:29:36.880 --> 01:29:40.299
+<v Upol>While the reporting was great. It only focused on the U.K.
+
+1327
+01:29:40.300 --> 01:29:44.169
+<v Upol>we really don't know what happened in the other one hundred and sixty countries where
+
+1328
+01:29:44.170 --> 01:29:46.059
+<v Upol>these exams were administered.
+
+1329
+01:29:46.060 --> 01:29:50.739
+<v Upol>So, you know, beyond, you know, as I say, denies you kindly shared my bio, right?
+
+1330
+01:29:50.740 --> 01:29:53.749
+<v Upol>What happens to the people who are not on the table?
+
+1331
+01:29:53.750 --> 01:29:58.249
+<v Upol>And I think if you don't amplify people's voices, we're not
+
+1332
+01:29:58.250 --> 01:30:01.149
+<v Upol>at the table, they often end up on the menu.
+
+1333
+01:30:01.150 --> 01:30:05.709
+<v Upol>So I think coming for the circle like that, something that I'm deeply curious about, so
+
+1334
+01:30:05.710 --> 01:30:10.179
+<v Upol>that's roughly like, you know what things are and if I have the privilege
+
+1335
+01:30:10.180 --> 01:30:14.889
+<v Upol>of giving a keynote at the World Usability Day actually tomorrow on November 11th,
+
+1336
+01:30:14.890 --> 01:30:19.479
+<v Upol>I have some invited talks lined up at the University of Buffalo on the 30th
+
+1337
+01:30:19.480 --> 01:30:24.639
+<v Upol>and then an expert panel discussion actually at the university's medical school,
+
+1338
+01:30:24.640 --> 01:30:27.909
+<v Upol>the Stanford Medical School, to the conference.
+
+1339
+01:30:27.910 --> 01:30:31.899
+<v Upol>So that's that's pretty much like like a ramp up to the end of the year.
+
+1340
+01:30:31.900 --> 01:30:36.339
+<v Andrey>Cool, yeah. Sadly, will release as five guests pass
+
+1341
+01:30:36.340 --> 01:30:37.340
+<v Andrey>through 11.
+
+1342
+01:30:38.230 --> 01:30:42.069
+<v Andrey>But will these talks be recorded or public?
+
+1343
+01:30:42.070 --> 01:30:42.769
+<v Andrey>Could be.
+
+1344
+01:30:42.770 --> 01:30:45.159
+<v Upol>That's a very good point. Thank you so much for asking.
+
+1345
+01:30:45.160 --> 01:30:50.439
+<v Upol>So I am going to check it. I wonder what I would recommend if the listeners are there.
+
+1346
+01:30:50.440 --> 01:30:54.909
+<v Upol>If you check out my Twitter, if they are public, I will be sure to make
+
+1347
+01:30:54.910 --> 01:30:58.599
+<v Upol>sure that they are published and shared widely.
+
+1348
+01:30:58.600 --> 01:31:02.650
+<v Upol>So as of now, I'm not sure which of these would be public versus not.
+
+1349
+01:31:03.670 --> 01:31:07.089
+<v Upol>But if they are, I will publish them on my Twitter.
+
+1350
+01:31:07.090 --> 01:31:10.689
+<v Upol>So if people are interested and I think we can also add links to them
+
+1351
+01:31:11.800 --> 01:31:12.870
+<v Upol>after the podcast.
+
+1352
+01:31:13.930 --> 01:31:16.449
+<v Andrey>Exactly. Yeah. So you can look down that description.
+
+1353
+01:31:16.450 --> 01:31:21.219
+<v Andrey>We'll figure it out and we'll have links to this
+
+1354
+01:31:21.220 --> 01:31:22.929
+<v Andrey>and all papers and everything.
+
+1355
+01:31:24.100 --> 01:31:26.379
+<v Andrey>All right. So that's cool.
+
+1356
+01:31:26.380 --> 01:31:30.999
+<v Andrey>And then as I like to wrap up, after all this intense discussion
+
+1357
+01:31:31.000 --> 01:31:35.499
+<v Andrey>of research and ideas and studies, just, you know, a little bit
+
+1358
+01:31:35.500 --> 01:31:38.679
+<v Andrey>about you and not your research.
+
+1359
+01:31:38.680 --> 01:31:40.839
+<v Andrey>What do you do these days?
+
+1360
+01:31:40.840 --> 01:31:45.459
+<v Andrey>Or, you know, in general, beyond research,
+
+1361
+01:31:45.460 --> 01:31:48.699
+<v Andrey>what are your main hobbies? What are your main interests?
+
+1362
+01:31:48.700 --> 01:31:52.569
+<v Upol>Yeah, I guess I'm, you know, I've been I love to cook.
+
+1363
+01:31:52.570 --> 01:31:57.219
+<v Upol>I think that is something that has been during the stay at home
+
+1364
+01:31:57.220 --> 01:32:00.069
+<v Upol>and pandemic mode has been a blessing.
+
+1365
+01:32:01.180 --> 01:32:05.959
+<v Upol>I absolutely love European football or soccer.
+
+1366
+01:32:05.960 --> 01:32:07.959
+<v Upol>All my team is not doing very well.
+
+1367
+01:32:07.960 --> 01:32:11.229
+<v Upol>Manchester United right now, but I tend to.
+
+1368
+01:32:11.230 --> 01:32:16.029
+<v Upol>That is my escape and I also play this game called Football
+
+1369
+01:32:16.030 --> 01:32:20.569
+<v Upol>Manager. I have not like fantasy football, but it's
+
+1370
+01:32:20.570 --> 01:32:23.259
+<v Upol>like kind of like that where it's a very data driven engine.
+
+1371
+01:32:24.850 --> 01:32:30.159
+<v Upol>And that's how it comes up to like this
+
+1372
+01:32:30.160 --> 01:32:33.759
+<v Upol>game engine that kind of predicts the future. I'm going to simulate games.
+
+1373
+01:32:33.760 --> 01:32:38.979
+<v Upol>That is my escape in terms of all the things in reality.
+
+1374
+01:32:38.980 --> 01:32:43.289
+<v Upol>But I absolutely a big fan of old school hip hop.
+
+1375
+01:32:43.290 --> 01:32:45.279
+<v Upol>So I listen to a lot of music.
+
+1376
+01:32:45.280 --> 01:32:49.779
+<v Upol>I, whenever I get some time, I do mix beats
+
+1377
+01:32:51.430 --> 01:32:55.119
+<v Upol>on my own time for my own enjoyment.
+
+1378
+01:32:55.120 --> 01:32:59.979
+<v Upol>I don't think I have a song called Account or anything now, but those are my ways
+
+1379
+01:32:59.980 --> 01:33:01.779
+<v Upol>of keeping sane.
+
+1380
+01:33:01.780 --> 01:33:06.219
+<v Upol>But most importantly, one of the most cherished things that I do
+
+1381
+01:33:06.220 --> 01:33:10.749
+<v Upol>is mentoring young researchers, especially who are
+
+1382
+01:33:10.750 --> 01:33:15.399
+<v Upol>underrepresented, especially who are from the global south.
+
+1383
+01:33:15.400 --> 01:33:19.989
+<v Upol>So I'm very proud of all the mentees that have taught me
+
+1384
+01:33:19.990 --> 01:33:23.649
+<v Upol>so much throughout the years, like ever since 2000.
+
+1385
+01:33:23.650 --> 01:33:28.209
+<v Upol>I think 11 12, I've had the privilege of mentoring around
+
+1386
+01:33:28.210 --> 01:33:32.649
+<v Upol>100 hundred people from many different countries in Asia and Africa and kind
+
+1387
+01:33:32.650 --> 01:33:35.349
+<v Upol>of guiding them through high school and those.
+
+1388
+01:33:35.350 --> 01:33:39.819
+<v Upol>That is something that like gives me a lot of joy actually, like whenever I get free
+
+1389
+01:33:39.820 --> 01:33:43.869
+<v Upol>time. That's actually what I do. And during application season, it's usually gets tough
+
+1390
+01:33:43.870 --> 01:33:48.309
+<v Upol>because we have a lot of requests to review applications because, you know,
+
+1391
+01:33:48.310 --> 01:33:51.279
+<v Upol>sometimes as you can imagine, life like the application.
+
+1392
+01:33:51.280 --> 01:33:54.329
+<v Upol>The statement of purpose is often a black box, right?
+
+1393
+01:33:54.330 --> 01:33:59.859
+<v Upol>And you don't know what to write. So that is one thing that I get a lot of joy from.
+
+1394
+01:33:59.860 --> 01:34:04.389
+<v Andrey>Yeah, that's that's fantastic. I think we all guys share what
+
+1395
+01:34:04.390 --> 01:34:09.159
+<v Andrey>a good deal of mentorship as Diaz's adviser for a reason, you know, as
+
+1396
+01:34:09.160 --> 01:34:13.599
+<v Andrey>an assigned mentor. So it's it does feel nice to give back, and
+
+1397
+01:34:13.600 --> 01:34:18.159
+<v Andrey>I have always enjoyed being a teaching assistant and these
+
+1398
+01:34:18.160 --> 01:34:20.949
+<v Andrey>various things are always pretty rewarding for me.
+
+1399
+01:34:22.330 --> 01:34:24.999
+<v Andrey>Well, that was a really fun interview.
+
+1400
+01:34:25.000 --> 01:34:30.069
+<v Andrey>It was great to see or hear about this
+
+1401
+01:34:30.070 --> 01:34:35.049
+<v Andrey>human centered AI as a researcher who talks of robots
+
+1402
+01:34:35.050 --> 01:34:37.689
+<v Andrey>refreshing to think about people for once.
+
+1403
+01:34:37.690 --> 01:34:41.769
+<v Andrey>Thank you so much for being on the podcast.
+
+1404
+01:34:41.770 --> 01:34:46.299
+<v Upol>My pleasure. Thank you, Andrey. I so appreciate the opportunity to talk to you and
+
+1405
+01:34:46.300 --> 01:34:49.779
+<v Upol>an animal in a way to you. Talk to the listeners.
+
+1406
+01:34:49.780 --> 01:34:50.829
+<v Upol>Thank you.
+
+1407
+01:34:50.830 --> 01:34:55.269
+<v Andrey>Absolutely. And once again, this is The Gradient podcast.
+
+1408
+01:34:55.270 --> 01:34:59.829
+<v Andrey>Check out our magazine website at The Gradient dot
+
+1409
+01:34:59.830 --> 01:35:04.469
+<v Andrey>com. To you, Earl. And our newsletter and actually this podcast at The Gradient pub
+
+1410
+01:35:04.470 --> 01:35:08.999
+<v Andrey>that Substack dot com, you can support us there by subscribing
+
+1411
+01:35:09.000 --> 01:35:13.439
+<v Andrey>and also share all of this review on this Apple and
+
+1412
+01:35:13.440 --> 01:35:18.479
+<v Andrey>all these kinds of things. So if you dig this stuff, we would appreciate your support.
+
+1413
+01:35:18.480 --> 01:35:22.890
+<v Andrey>Thank you so much for listening and be sure to tune into our future episodes.
+
